@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="58px" viewBox="0 0 44 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>FeatureToiletMen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Map" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="FeatureToiletMen" sketch:type="MSArtboardGroup" transform="translate(-15.000000, -8.000000)" fill="#000000">
+            <g sketch:type="MSLayerGroup" transform="translate(15.000000, 8.000000)">
+                <path d="M43.49,56.328 L41.395,38.162 C40.977,34.812 38.095,32.287 34.693,32.287 L9.308,32.287 C5.905,32.287 3.023,34.812 2.604,38.176 L0.51,56.328 C0.415,57.151 1.005,57.895 1.828,57.99 C2.648,58.085 3.396,57.495 3.49,56.672 L5.582,38.534 C5.814,36.683 7.415,35.287 9.308,35.287 L34.693,35.287 C36.585,35.287 38.187,36.683 38.416,38.52 L40.51,56.672 C40.598,57.437 41.247,58 41.998,58 C42.056,58 42.113,57.997 42.172,57.99 C42.995,57.895 43.585,57.151 43.49,56.328" id="Fill-12" sketch:type="MSShapeGroup"></path>
+                <path d="M21.999,29.255 C29.6,29.255 35.331,22.424 35.331,13.365 C35.331,6.12 29.226,0 21.999,0 C14.774,0 8.669,6.12 8.669,13.365 C8.669,22.424 14.399,29.255 21.999,29.255 L21.999,29.255 Z M21.999,3 C27.6,3 32.331,7.747 32.331,13.365 C32.331,20.713 27.89,26.255 21.999,26.255 C16.11,26.255 11.669,20.713 11.669,13.365 C11.669,7.747 16.4,3 21.999,3 L21.999,3 Z" id="Fill-13" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="click on all links" timestamp="2016-02-09T11:08:21" hostname="localhost" time="0.006" errors="0" tests="1" skipped="0" disabled="0" failures="1">
+  <testcase classname="click on all links" name="should display different subpages" time="0.005">
+   <failure type="exception" message="Failed: mainpage.siteServicesClick is not a function"><![CDATA[TypeError: mainpage.siteServicesClick is not a function
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\login_to_NSM.js:58:11)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:96:23
+    at [object Object].promise.Promise.goog.defineClass.constructor (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1056:7)
+    at new wrappedCtr (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\base.js:2468:26)
+    at controlFlowExecute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:82:18)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_.execute_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2776:14)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2758:21)
+    at goog.async.run.processWorkQueue (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\async\run.js:124:15)
+    at process._tickCallback (node.js:401:9)
+From: Task: Run it("should display different subpages") in control flow
+    at Object.<anonymous> (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:81:14)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at QueueRunner.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:627:35)
+    at Spec.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:353:10)
+    at Object.fn (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:2360:37)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at QueueRunner.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1762:10)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (F:\siterumasteru\src\ui\test\e2e\login_to_NSM.js:56:3)
+    at addSpecsToSuite (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:743:25)
+    at Env.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:713:7)
+    at jasmineInterface.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:3219:18)
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\login_to_NSM.js:53:1)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>

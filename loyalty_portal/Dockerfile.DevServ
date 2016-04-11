@@ -1,0 +1,28 @@
+# Yves Hwang
+# 14.08.2015
+#
+FROM ubuntu:trusty
+MAINTAINER Yves hwang, yves.hwang@statoilfuelretail.com
+
+# Install java8
+# yh 05.06.2015. hot fix for broken python software properties. see http://askubuntu.com/questions/598465/apt-get-install-python-software-properties-not-working
+# bug reported here https://bugs.launchpad.net/ubuntu/+source/apt-setup/+bug/1434699
+RUN rm -fr /var/lib/apt/lists
+RUN apt-get update
+RUN apt-get install python-software-properties -y
+RUN apt-get install software-properties-common -y
+RUN add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get update
+RUN apt-get install openjdk-8-jdk -y
+
+EXPOSE 8080
+
+# Add war file to image
+ADD sitemaster.jar /opt/
+
+# Startup script
+ADD deploy-and-run.sh /opt/
+RUN chmod a+x /opt/deploy-and-run.sh
+
+# Startup script
+CMD /opt/deploy-and-run.sh

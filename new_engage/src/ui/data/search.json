@@ -1,0 +1,1105 @@
+[
+    {
+      "created" : 1441721040429,
+      "timestamp" : 1441721040429,
+      "id" : 1,
+      "stationId" : "57052",
+      "marketingName" : "1-2-3 AKSDAL",
+      "companyName" : "Statoil Fuel & Retail Norge AS",
+      "bankgiro" : "",
+      "postgiro" : "",
+      "address" : {
+        "street" : "",
+        "postalCode" : "5575",
+        "city" : "AKSDAL",
+        "county" : "Rogaland",
+        "country" : "Norway",
+        "municipality" : "Tysvær",
+        "mailingAddress" : "POSTBOKS 1176, SENTRUM",
+        "mailingAddressPostalCode" : "0107 OSLO",
+        "fax" : "",
+        "phone" : "22962530"
+      },
+      "orgNumber" : "914766451",
+      "branchId" : "",
+      "msiNumber" : "",
+      "hasRealEstate" : true,
+      "reportKPIAttendant" : "No /  No",
+      "customerNumber" : "",
+      "customerNumberLogistic" : "",
+      "eanCode" : "",
+      "retailerId" : "",
+      "equipmentId" : "57052",
+      "customerNoWholesaler" : "",
+      "uffeOwnerNumber" : "4926",
+      "directCategoryShipment" : "",
+      "ownershipOperationType" : "CO/CO",
+      "previousOwnerOperation" : "CO/CO",
+      "dateOfChange" : null,
+      "stationType" : {
+        "created" : 1441720848925,
+        "timestamp" : 1441720848925,
+        "id" : null,
+        "type" : "Automat",
+        "modelSchema" : { }
+      },
+      "status" : "Active",
+      "unit" : "Retail Station",
+      "category" : "1-2-3",
+      "priceProfile" : "",
+      "cluster" : "",
+      "inOperationFrom" : {
+        "year" : 2004,
+        "month" : "MARCH",
+        "monthValue" : 3,
+        "dayOfMonth" : 13,
+        "dayOfWeek" : "SATURDAY",
+        "era" : "CE",
+        "dayOfYear" : 73,
+        "leapYear" : true,
+        "chronology" : {
+          "id" : "ISO",
+          "calendarType" : "iso8601"
+        }
+      },
+      "inOperationTo" : null,
+      "engineerDistrict" : "Arvid Pedersen",
+      "salesZone" : "",
+      "openingInfo" : {
+        "openingTimes" : {
+        },
+        "temporarilyClosed" : [ ],
+        "alwaysOpen" : null
+      },
+      "xCoord" : "5.443033",
+      "yCoord" : "59.422019",
+      "services" : [
+        {
+          "created" : 1441721054813,
+          "timestamp" : 1441721054813,
+          "id" : 6,
+          "type" : "Kort ute",
+          "icon" : "Kort ute",
+          "lang" : "Kort ute",
+          "displayName" : "Kort ute",
+          "modelSchema" : { }
+        },
+        {
+          "created" : 1441721054813,
+          "timestamp" : 1441721054813,
+          "id" : 7,
+          "type" : "Routex Atlas participant",
+          "icon" : "Routex Atlas participant",
+          "lang" : "Routex Atlas participant",
+          "displayName" : "Routex Atlas participant",
+          "modelSchema" : { }
+        }
+      ],
+      "fuels" : [
+        {
+          "created" : 1441721054815,
+          "timestamp" : 1441721054815,
+          "id" : 2,
+          "type" : "miles 95",
+          "icon" : "miles 95",
+          "lang" : "miles 95",
+          "displayName" : "miles 95",
+          "modelSchema" : { }
+        },
+        {
+          "created" : 1441721054815,
+          "timestamp" : 1441721054815,
+          "id" : 3,
+          "type" : "E0",
+          "icon" : "E0",
+          "lang" : "E0",
+          "displayName" : "E0",
+          "modelSchema" : { }
+        },
+        {
+          "created" : 1441721054815,
+          "timestamp" : 1441721054815,
+          "id" : 4,
+          "type" : "miles Diesel",
+          "icon" : "miles Diesel",
+          "lang" : "miles Diesel",
+          "displayName" : "miles Diesel",
+          "modelSchema" : { }
+        },
+        {
+          "created" : 1441721054815,
+          "timestamp" : 1441721054815,
+          "id" : 5,
+          "type" : "",
+          "icon" : "",
+          "lang" : "",
+          "displayName" : "",
+          "modelSchema" : { }
+        }
+      ],
+      "displayName" : "1-2-3 AKSDAL",
+      "countryCode" : null,
+      "modelSchema" : { }
+    },
+
+    {
+      "created":1441721040430,
+      "timestamp":1441721040430,
+      "id":8,
+      "stationId":"57018",
+      "marketingName":"1-2-3 ARNATVEIT",
+      "companyName":"Statoil Fuel & Retail Norge AS",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Arnatveitvn 143",
+        "postalCode":"5262",
+        "city":"ARNATVEIT",
+        "county":"Hordaland",
+        "country":"Norway",
+        "municipality":"Bergen",
+        "mailingAddress":"POSTBOKS 1176, SENTRUM",
+        "mailingAddressPostalCode":"0107 OSLO",
+        "fax":"",
+        "phone":"22962530"
+      },
+      "orgNumber":"914766451",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"",
+      "customerNumberLogistic":"",
+      "eanCode":"",
+      "retailerId":"",
+      "equipmentId":"57018",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"4472",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"/",
+      "dateOfChange":null,
+      "stationType":{
+        "created":1441720848950,
+        "timestamp":1441720848950,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":null,
+      "inOperationTo":{
+        "year":2015,
+        "month":"DECEMBER",
+        "monthValue":12,
+        "dayOfMonth":31,
+        "dayOfWeek":"THURSDAY",
+        "era":"CE",
+        "dayOfYear":365,
+        "leapYear":false,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "engineerDistrict":"Birger Honningsvåg",
+      "salesZone":"",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"5.47588",
+      "yCoord":"60.40642",
+      "services":[
+        {
+          "created":1441721054809,
+          "timestamp":1441721054809,
+          "id":13,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054811,
+          "timestamp":1441721054811,
+          "id":9,
+          "type":"miles 95",
+          "icon":"miles 95",
+          "lang":"miles 95",
+          "displayName":"miles 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054811,
+          "timestamp":1441721054811,
+          "id":10,
+          "type":"E0",
+          "icon":"E0",
+          "lang":"E0",
+          "displayName":"E0",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054811,
+          "timestamp":1441721054811,
+          "id":11,
+          "type":"miles Diesel",
+          "icon":"miles Diesel",
+          "lang":"miles Diesel",
+          "displayName":"miles Diesel",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054811,
+          "timestamp":1441721054811,
+          "id":12,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName": "1-2-3 ARNATVEIT",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    },
+    {
+      "created":1441721040431,
+      "timestamp":1441721040431,
+      "id":14,
+      "stationId":"57031",
+      "marketingName":"1-2-3 ASKØY",
+      "companyName":"Statoil Fuel & Retail Norge AS",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Kleppeveien 10",
+        "postalCode":"5300",
+        "city":"KLEPPESTØ",
+        "county":"Hordaland",
+        "country":"Norway",
+        "municipality":"Askøy",
+        "mailingAddress":"POSTBOKS 1176, SENTRUM",
+        "mailingAddressPostalCode":"0107 OSLO",
+        "fax":"",
+        "phone":"22962530"
+      },
+      "orgNumber":"914766451",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"",
+      "customerNumberLogistic":"",
+      "eanCode":"",
+      "retailerId":"",
+      "equipmentId":"57031",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"4485",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"/",
+      "dateOfChange":null,
+      "stationType":{
+        "created":1441720848951,
+        "timestamp":1441720848951,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":{
+        "year":2002,
+        "month":"NOVEMBER",
+        "monthValue":11,
+        "dayOfMonth":8,
+        "dayOfWeek":"FRIDAY",
+        "era":"CE",
+        "dayOfYear":312,
+        "leapYear":false,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "inOperationTo":null,
+      "engineerDistrict":"Birger Honningsvåg",
+      "salesZone":"",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"5.22089",
+      "yCoord":"60.41256",
+      "services":[
+        {
+          "created":1441721054805,
+          "timestamp":1441721054805,
+          "id":19,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054807,
+          "timestamp":1441721054807,
+          "id":15,
+          "type":"miles 95",
+          "icon":"miles 95",
+          "lang":"miles 95",
+          "displayName":"miles 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054807,
+          "timestamp":1441721054807,
+          "id":16,
+          "type":"E0",
+          "icon":"E0",
+          "lang":"E0",
+          "displayName":"E0",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054807,
+          "timestamp":1441721054807,
+          "id":17,
+          "type":"miles Diesel",
+          "icon":"miles Diesel",
+          "lang":"miles Diesel",
+          "displayName":"miles Diesel",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054807,
+          "timestamp":1441721054807,
+          "id":18,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName":"1-2-3 ASKØY",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    },
+    {
+      "created":1441721040432,
+      "timestamp":1441721040432,
+      "id":20,
+      "stationId":"57007",
+      "marketingName":"1-2-3 AULI",
+      "companyName":"Statoil Fuel & Retail Norge AS",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Auli Senteret",
+        "postalCode":"1929",
+        "city":"AULI",
+        "county":"Akershus",
+        "country":"Norway",
+        "municipality":"Nes (Ak)",
+        "mailingAddress":"POSTBOKS 1176 - SENTRUM",
+        "mailingAddressPostalCode":"0107 OSLO",
+        "fax":"",
+        "phone":"22962530"
+      },
+      "orgNumber":"914766451",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"",
+      "customerNumberLogistic":"",
+      "eanCode":"",
+      "retailerId":"",
+      "equipmentId":"57007",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"4461",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"/",
+      "dateOfChange":null,
+      "stationType":{
+        "created":1441720848952,
+        "timestamp":1441720848952,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":null,
+      "inOperationTo":null,
+      "engineerDistrict":"Stein Wennberg",
+      "salesZone":"",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"11.35699",
+      "yCoord":"60.03473",
+      "services":[
+        {
+          "created":1441721054801,
+          "timestamp":1441721054801,
+          "id":24,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054803,
+          "timestamp":1441721054803,
+          "id":21,
+          "type":"miles 95",
+          "icon":"miles 95",
+          "lang":"miles 95",
+          "displayName":"miles 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054803,
+          "timestamp":1441721054803,
+          "id":22,
+          "type":"miles Diesel",
+          "icon":"miles Diesel",
+          "lang":"miles Diesel",
+          "displayName":"miles Diesel",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054803,
+          "timestamp":1441721054803,
+          "id":23,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName":"1-2-3 AULI",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    },
+    {
+      "created":1441721040433,
+      "timestamp":1441721040433,
+      "id":25,
+      "stationId":"57055",
+      "marketingName":"1-2-3 AURLAND",
+      "companyName":"Statoil Fuel & Retail Norge AS",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Nyheim",
+        "postalCode":"5745",
+        "city":"AURLAND",
+        "county":"Sogn og Fjordane",
+        "country":"Norway",
+        "municipality":"Aurland",
+        "mailingAddress":"POSTBOKS 1176, SENTRUM",
+        "mailingAddressPostalCode":"0106 OSLO",
+        "fax":"",
+        "phone":"22962530"
+      },
+      "orgNumber":"914766451",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"",
+      "customerNumberLogistic":"",
+      "eanCode":"",
+      "retailerId":"",
+      "equipmentId":"57055",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"4912",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"CO/CO",
+      "dateOfChange":null,
+      "stationType":{
+        "created":1441720848953,
+        "timestamp":1441720848953,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":{
+        "year":2004,
+        "month":"JUNE",
+        "monthValue":6,
+        "dayOfMonth":15,
+        "dayOfWeek":"TUESDAY",
+        "era":"CE",
+        "dayOfYear":167,
+        "leapYear":true,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "inOperationTo":null,
+      "engineerDistrict":"Birger Honningsvåg",
+      "salesZone":"",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"7.21100",
+      "yCoord":"60.89883",
+      "services":[
+        {
+          "created":1441721054797,
+          "timestamp":1441721054797,
+          "id":30,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054799,
+          "timestamp":1441721054799,
+          "id":26,
+          "type":"miles 95",
+          "icon":"miles 95",
+          "lang":"miles 95",
+          "displayName":"miles 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054799,
+          "timestamp":1441721054799,
+          "id":27,
+          "type":"E0",
+          "icon":"E0",
+          "lang":"E0",
+          "displayName":"E0",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054799,
+          "timestamp":1441721054799,
+          "id":28,
+          "type":"miles Diesel",
+          "icon":"miles Diesel",
+          "lang":"miles Diesel",
+          "displayName":"miles Diesel",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054799,
+          "timestamp":1441721054799,
+          "id":29,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName":"1-2-3 AURLAND",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    },
+    {
+      "created":1441721040435,
+      "timestamp":1441721040435,
+      "id":31,
+      "stationId":"57042",
+      "marketingName":"1-2-3 BALESTRAND",
+      "companyName":"Statoil Fuel & Retail Norge AS",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Holmamyrane",
+        "postalCode":"6899",
+        "city":"BALESTRAND",
+        "county":"Sogn og Fjordane",
+        "country":"Norway",
+        "municipality":"Balestrand",
+        "mailingAddress":"POSTBOKS 1176, Sentrum",
+        "mailingAddressPostalCode":"0107 OSLO",
+        "fax":"",
+        "phone":"22962530"
+      },
+      "orgNumber":"914766451",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"",
+      "customerNumberLogistic":"",
+      "eanCode":"",
+      "retailerId":"",
+      "equipmentId":"57042",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"4496",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"CO/CO",
+      "dateOfChange":null,
+      "stationType":{
+        "created":1441720848956,
+        "timestamp":1441720848956,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":{
+        "year":2003,
+        "month":"JUNE",
+        "monthValue":6,
+        "dayOfMonth":13,
+        "dayOfWeek":"FRIDAY",
+        "era":"CE",
+        "dayOfYear":164,
+        "leapYear":false,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "inOperationTo":null,
+      "engineerDistrict":"Birger Honningsvåg",
+      "salesZone":"",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"6.53343",
+      "yCoord":"61.20851",
+      "services":[
+        {
+          "created":1441721054793,
+          "timestamp":1441721054793,
+          "id":36,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054795,
+          "timestamp":1441721054795,
+          "id":32,
+          "type":"miles 95",
+          "icon":"miles 95",
+          "lang":"miles 95",
+          "displayName":"miles 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054795,
+          "timestamp":1441721054795,
+          "id":33,
+          "type":"E0",
+          "icon":"E0",
+          "lang":"E0",
+          "displayName":"E0",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054795,
+          "timestamp":1441721054795,
+          "id":34,
+          "type":"miles Diesel",
+          "icon":"miles Diesel",
+          "lang":"miles Diesel",
+          "displayName":"miles Diesel",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054795,
+          "timestamp":1441721054795,
+          "id":35,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName":"1-2-3 BALESTRAND",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    },
+    {
+      "created":1441721040436,
+      "timestamp":1441721040436,
+      "id":37,
+      "stationId":"10420",
+      "marketingName":"1-2-3 BANETOFTEN, HOLSTEBRO",
+      "companyName":"",
+      "bankgiro":"",
+      "postgiro":"",
+      "address":{
+        "street":"Banetoften 2-4",
+        "postalCode":"7500",
+        "city":"Holstebro",
+        "county":"Region Midtjylland",
+        "country":"Denmark",
+        "municipality":"Holstebro Kommune",
+        "mailingAddress":"Webersvej 7",
+        "mailingAddressPostalCode":"7500 Holstebro",
+        "fax":"",
+        "phone":"80200123"
+      },
+      "orgNumber":"28142412",
+      "branchId":"",
+      "msiNumber":"",
+      "hasRealEstate":true,
+      "reportKPIAttendant":"No /  No",
+      "customerNumber":"1003364521",
+      "customerNumberLogistic":"",
+      "eanCode":"5790001416621",
+      "retailerId":"",
+      "equipmentId":"",
+      "customerNoWholesaler":"",
+      "uffeOwnerNumber":"",
+      "directCategoryShipment":"",
+      "ownershipOperationType":"CO/CO",
+      "previousOwnerOperation":"Not entered/Not entered",
+      "dateOfChange":{
+        "year":2007,
+        "month":"JANUARY",
+        "monthValue":1,
+        "dayOfMonth":3,
+        "dayOfWeek":"WEDNESDAY",
+        "era":"CE",
+        "dayOfYear":3,
+        "leapYear":false,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "stationType":{
+        "created":1441720848958,
+        "timestamp":1441720848958,
+        "id":null,
+        "type":"Automat",
+        "modelSchema":{
+
+        }
+      },
+      "status":"Active",
+      "unit":"Retail Station",
+      "category":"1-2-3",
+      "priceProfile":"",
+      "cluster":"",
+      "inOperationFrom":{
+        "year":2007,
+        "month":"JANUARY",
+        "monthValue":1,
+        "dayOfMonth":16,
+        "dayOfWeek":"TUESDAY",
+        "era":"CE",
+        "dayOfYear":16,
+        "leapYear":false,
+        "chronology":{
+          "id":"ISO",
+          "calendarType":"iso8601"
+        }
+      },
+      "inOperationTo":null,
+      "engineerDistrict":"Anker Olesen",
+      "salesZone":"DK JET",
+      "openingInfo":{
+        "openingTimes" : {
+          "weekdays": {
+            "open": "06:00",
+            "close": "23:00"
+          },
+          "saturday": {
+            "open": "07:00",
+            "close": "23:00"
+          },
+          "sunday": {
+            "open": "07:00",
+            "close": "23:00"
+          }
+        },
+        "temporarilyClosed":[
+
+        ],
+        "alwaysOpen":null
+      },
+      "xCoord":"8.593409",
+      "yCoord":"56.363619",
+      "services":[
+        {
+          "created":1441721054789,
+          "timestamp":1441721054789,
+          "id":42,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054789,
+          "timestamp":1441721054789,
+          "id":43,
+          "type":"Routex Atlas participant",
+          "icon":"Routex Atlas participant",
+          "lang":"Routex Atlas participant",
+          "displayName":"Routex Atlas participant",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "fuels":[
+        {
+          "created":1441721054791,
+          "timestamp":1441721054791,
+          "id":38,
+          "type":"Blyfri 92",
+          "icon":"Blyfri 92",
+          "lang":"Blyfri 92",
+          "displayName":"Blyfri 92",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054791,
+          "timestamp":1441721054791,
+          "id":39,
+          "type":"Blyfri 95",
+          "icon":"Blyfri 95",
+          "lang":"Blyfri 95",
+          "displayName":"Blyfri 95",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054791,
+          "timestamp":1441721054791,
+          "id":40,
+          "type":"Diesel B7",
+          "icon":"Diesel B7",
+          "lang":"Diesel B7",
+          "displayName":"Diesel B7",
+          "modelSchema":{
+
+          }
+        },
+        {
+          "created":1441721054791,
+          "timestamp":1441721054791,
+          "id":41,
+          "type":"",
+          "icon":"",
+          "lang":"",
+          "displayName":"",
+          "modelSchema":{
+
+          }
+        }
+      ],
+      "displayName":"Statoil 1-2-3 BANETOFTEN, HOLSTEBRO",
+      "countryCode":null,
+      "modelSchema":{
+
+      }
+    }
+  ]

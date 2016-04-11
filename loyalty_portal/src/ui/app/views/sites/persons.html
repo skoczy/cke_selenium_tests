@@ -1,0 +1,72 @@
+<div cg-busy="loadSite" class="loading-wrap"></div>
+<div class="grid-block vertical" id="content">
+  <div id="stationID" class="grid-block">
+    <div class="grid-content">
+      <h1 class="id">{{ 'STATION_ID' | translate }}: {{ siteId }}</h1>
+      <h3>{{ site.stationName }}</h3>
+      <span class="status">{{ 'STATUS' | translate }}: {{ 'STATION_IS' | translate }} {{ site.status }}</span>
+    </div>
+  </div>
+  <div  id="generalData" class="grid-block">
+    <div class="grid-content">
+      <h2 class="hide-for-print">{{ 'SITE_PERSONS' | translate }}</h2>
+    </div>
+    <div class="grid-content text-right">
+      <a class="button secondary hide-for-print" ng-print print-element-id="content" translate>PRINT</a>
+      <a class="button secondary hide-for-print" ng-click="getCsvData()">{{ 'EXPORT' | translate }}</a>
+    </div>
+  </div>
+
+  <div id="custom-fields" class="grid-block vertical">
+    <div class="grid-content">
+      <div class="grid-block">
+        <form class="grid-content" ng-submit="savePersons()" name="personsForm" novalidate>
+          <div class="grid-block">
+            <div class="small-12 medium-12 large-11 xlarge-10 xxlarge-9">
+              <table class="site-persons" ng-show="persons.length">
+                <thead>
+                  <tr>
+                    <th translate>ROLE</th>
+                    <th translate>NAME</th>
+                    <th translate>PHONE</th>
+                    <th translate>EMAIL</th>
+                  </tr>
+                </thead>
+                <tr ng-repeat="person in persons">
+                  <td class="person-role">
+                    <input type="text" ng-if="personFromJDE(person)" value="{{ person.role.label }}" disabled>
+                    <select
+                      name="serviceType[]"
+                      ng-model="person.role"
+                      ng-options="role as role.label for role in sitePersonRoles track by role.name"
+                      ng-if="!personFromJDE(person)"
+                      required
+                    ></select>
+                  </td>
+                  <td class="person-name">
+                    <input type="text" name="name[]" ng-model="person.name" ng-disabled="personFromJDE(person)" required>
+                  </td>
+                  <td class="phone">
+                    <div class="phone-cc"><input type="text" name="phone_cc[]" ng-model="person.phonecc" pattern="\d*"></div>
+                    <input class="phone-number" type="text" name="phone[]" ng-model="person.phone" pattern="\d*">
+                  </td>
+                  <td class="person-email">
+                    <input type="email" name="email[]" ng-model="person.email">
+                  </td>
+
+                  <td class="remove hide-for-print" ng-show="!personFromJDE(person)"><a ng-click="removePerson(person)" translate>REMOVE</a></td>
+                </tr>
+              </table>
+
+              <p><a class="hide-for-print" ng-click="addPerson()" translate>ADD_NEW_PERSON</a></p>
+            </div>
+          </div>
+          <div class="grid-block">
+              <input type="submit" class="button hide-for-print" value="{{ 'SAVE' | translate }}">
+              <input type="button" class="button secondary hide-for-print" value="{{ 'CANCEL' | translate }}" ng-click="resetPersons()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

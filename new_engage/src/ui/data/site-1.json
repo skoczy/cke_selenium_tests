@@ -1,0 +1,154 @@
+{
+  "created" : 1441721040429,
+  "timestamp" : 1441721040429,
+  "id" : 1,
+  "stationId" : "57052",
+  "marketingName" : "1-2-3 AKSDAL",
+  "companyName" : "Statoil Fuel & Retail Norge AS",
+  "bankgiro" : "",
+  "postgiro" : "",
+  "address" : {
+    "street" : "",
+    "postalCode" : "5575",
+    "city" : "AKSDAL",
+    "county" : "Rogaland",
+    "country" : "Norway",
+    "municipality" : "Tysvær",
+    "mailingAddress" : "POSTBOKS 1176, SENTRUM",
+    "mailingAddressPostalCode" : "0107 OSLO",
+    "fax" : "",
+    "phone" : "22962530"
+  },
+  "orgNumber" : "914766451",
+  "branchId" : "",
+  "msiNumber" : "",
+  "hasRealEstate" : true,
+  "reportKPIAttendant" : "No /  No",
+  "customerNumber" : "",
+  "customerNumberLogistic" : "",
+  "eanCode" : "",
+  "retailerId" : "",
+  "equipmentId" : "57052",
+  "customerNoWholesaler" : "",
+  "uffeOwnerNumber" : "4926",
+  "directCategoryShipment" : "",
+  "ownershipOperationType" : "CO/CO",
+  "previousOwnerOperation" : "CO/CO",
+  "dateOfChange" : null,
+  "stationType" : {
+    "created" : 1441720848925,
+    "timestamp" : 1441720848925,
+    "id" : null,
+    "type" : "Automat",
+    "modelSchema" : { }
+  },
+  "status" : "Active",
+  "unit" : "Retail Station",
+  "category" : "1-2-3",
+  "priceProfile" : "",
+  "cluster" : "",
+  "inOperationFrom" : {
+    "year" : 2004,
+    "month" : "MARCH",
+    "monthValue" : 3,
+    "dayOfMonth" : 13,
+    "dayOfWeek" : "SATURDAY",
+    "era" : "CE",
+    "dayOfYear" : 73,
+    "leapYear" : true,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "inOperationTo" : null,
+  "engineerDistrict" : "Arvid Pedersen",
+  "salesZone" : "",
+  "openingInfo" : {
+    "openingTimes" : {
+      "weekdays": {
+        "open": "06:00",
+        "close": "23:00"
+      },
+      "saturday": {
+        "open": "07:00",
+        "close": "23:00"
+      },
+      "sunday": {
+        "open": "07:00",
+        "close": "23:00"
+      }
+    },
+    "temporarilyClosed" : [ ],
+    "alwaysOpen" : null
+  },
+  "xCoord" : "5.443033",
+  "yCoord" : "59.422019",
+  "services" : [
+    {
+      "created" : 1441721054813,
+      "timestamp" : 1441721054813,
+      "id" : 6,
+      "type" : "Kort ute",
+      "icon" : "Kort ute",
+      "lang" : "Kort ute",
+      "displayName" : "Kort ute",
+      "modelSchema" : { }
+    },
+    {
+      "created" : 1441721054813,
+      "timestamp" : 1441721054813,
+      "id" : 7,
+      "type" : "Routex Atlas participant",
+      "icon" : "Routex Atlas participant",
+      "lang" : "Routex Atlas participant",
+      "displayName" : "Routex Atlas participant",
+      "modelSchema" : { }
+    }
+  ],
+  "fuels" : [
+    {
+      "created" : 1441721054815,
+      "timestamp" : 1441721054815,
+      "id" : 2,
+      "type" : "miles 95",
+      "icon" : "miles 95",
+      "lang" : "miles 95",
+      "displayName" : "miles 95",
+      "modelSchema" : { }
+    },
+    {
+      "created" : 1441721054815,
+      "timestamp" : 1441721054815,
+      "id" : 3,
+      "type" : "E0",
+      "icon" : "E0",
+      "lang" : "E0",
+      "displayName" : "E0",
+      "modelSchema" : { }
+    },
+    {
+      "created" : 1441721054815,
+      "timestamp" : 1441721054815,
+      "id" : 4,
+      "type" : "miles Diesel",
+      "icon" : "miles Diesel",
+      "lang" : "miles Diesel",
+      "displayName" : "miles Diesel",
+      "modelSchema" : { }
+    },
+    {
+      "created" : 1441721054815,
+      "timestamp" : 1441721054815,
+      "id" : 5,
+      "type" : "",
+      "icon" : "",
+      "lang" : "",
+      "displayName" : "",
+      "modelSchema" : { }
+    }
+  ],
+  "displayName" : "1-2-3 AKSDAL",
+  "countryCode" : null,
+  "modelSchema" : { }
+}

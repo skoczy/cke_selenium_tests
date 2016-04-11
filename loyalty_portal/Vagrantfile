@@ -1,0 +1,47 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Yves Hwang 
+# dev env provisioning. Some examples with Vagrant, Docker etc.
+
+VAGRANTFILE_API_VERSION = "2"
+
+$tools_install = <<SCRIPT
+apt-get update -qq
+apt-get install -y python-software-properties
+apt-get install -y curl
+apt-get install -y git
+apt-get install -y gradle
+SCRIPT
+
+$openjdk8_install = <<SCRIPT
+add-apt-repository ppa:openjdk-r/ppa -y
+apt-get update -qq
+apt-get install -y openjdk-8-jdk
+SCRIPT
+
+$docker_install = <<SCRIPT
+wget -q -O - https://get.docker.io/gpg | apt-key add -
+echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+apt-get update -qq
+apt-get install -q -y --force-yes lxc-docker
+usermod -a -G docker vagrant
+sed -e 's/DOCKER_OPTS=/DOCKER_OPTS=\"-H 0.0.0.0:4243\"/g' /etc/init/docker.conf > /vagrant/docker.conf.sed
+cp /vagrant/docker.conf.sed /etc/init/docker.conf
+rm -f /vagrant/docker.conf.sed
+service docker restart
+SCRIPT
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.define :docker do |docker|
+        # based on
+        # http://macyves.wordpress.com/2014/05/31/docker-in-osx-via-boot2docker-or-vagrant-getting-over-the-hump/
+
+        docker.vm.box = "precise64"
+        docker.vm.box_url = "http://files.vagrantup.com/precise64.box"
+        docker.vm.network "forwarded_port", guest: 80, host:58080
+        docker.vm.network "forwarded_port", guest: 4243, host: 4243
+        docker.vm.provision :shell, :inline => $tools_install
+        docker.vm.provision :shell, :inline => $docker_install
+    end
+end

@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2016 Statoil Fuel & Retail ASA
+ * All rights reserved.
+ *
+ * This code is proprietary and the property of Statoil Fuel & Retail ASA. It may not be
+ * distributed without written permission from Statoil Fuel & Retail ASA.
+ */
+
+task importCsvData(type: JavaExec) {
+    doFirst {
+        System.properties.findAll {
+            it.key.startsWith('hibernate') || it.key.startsWith('application.environment')
+        }.each { systemProperties << it }
+    }
+    classpath = sourceSets.data.runtimeClasspath + sourceSets.data.resources
+    main = 'data.SitesImport'
+}
+
+task generateCsvData(type: JavaExec) {
+    doFirst {
+        System.properties.findAll {
+            it.key.startsWith('hibernate') || it.key.startsWith('application.environment')
+        }.each { systemProperties << it }
+    }
+    classpath = sourceSets.data.runtimeClasspath + sourceSets.data.resources
+    main = 'data.SitesImport'
+}

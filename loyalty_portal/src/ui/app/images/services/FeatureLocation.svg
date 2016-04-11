@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="59px" viewBox="0 0 44 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>FeatureLocation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Map" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="FeatureLocation" sketch:type="MSArtboardGroup" transform="translate(-15.000000, -8.000000)" fill="#000000">
+            <g sketch:type="MSLayerGroup" transform="translate(15.000000, 8.000000)">
+                <path d="M22,0.968 C10.145,0.968 0.5,10.64 0.5,22.527 C0.5,32.006 4.856,39.556 12.378,49.393 C13.815,51.273 16.138,54.276 18.413,57.21 C19.279,58.327 20.587,58.968 22,58.968 C23.413,58.968 24.721,58.327 25.587,57.21 C27.862,54.277 30.184,51.274 31.624,49.393 C39.146,39.558 43.5,32.008 43.5,22.527 C43.5,10.64 33.856,0.968 22,0.968 L22,0.968 Z M29.241,47.569 C27.805,49.446 25.487,52.443 23.216,55.372 C22.628,56.13 21.372,56.13 20.784,55.372 C18.513,52.444 16.196,49.447 14.761,47.57 C7.629,38.244 3.5,31.156 3.5,22.527 C3.5,12.294 11.799,3.968 22,3.968 C32.201,3.968 40.5,12.294 40.5,22.527 C40.5,31.159 36.372,38.246 29.241,47.569 L29.241,47.569 Z" id="Fill-61" sketch:type="MSShapeGroup"></path>
+                <path d="M21.999,13.795 C17.242,13.795 13.372,17.664 13.372,22.42 C13.372,27.177 17.242,31.047 21.999,31.047 C26.757,31.047 30.628,27.177 30.628,22.42 C30.628,17.664 26.757,13.795 21.999,13.795 L21.999,13.795 Z M21.999,28.047 C18.897,28.047 16.372,25.523 16.372,22.42 C16.372,19.318 18.897,16.795 21.999,16.795 C25.103,16.795 27.628,19.318 27.628,22.42 C27.628,25.523 25.103,28.047 21.999,28.047 L21.999,28.047 Z" id="Fill-62" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

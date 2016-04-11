@@ -1,0 +1,6 @@
+name,label,fromjde
+SM,Station Manager,true
+SMA,Station Manager Assistant,false
+ASM,Area Sales Manager,true
+CT1,Caretaker1,false
+CT2,Caretaker2,false

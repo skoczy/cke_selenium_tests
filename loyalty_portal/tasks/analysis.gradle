@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2016 Statoil Fuel & Retail ASA
+ * All rights reserved.
+ *
+ * This code is proprietary and the property of Statoil Fuel & Retail ASA. It may not be
+ * distributed without written permission from Statoil Fuel & Retail ASA.
+ */
+
+apply plugin: 'findbugs'
+apply plugin: 'codenarc'
+apply plugin: 'sonar-runner'
+apply plugin: 'pmd'
+apply plugin: 'jacoco'
+
+pmd {
+    ruleSets = [
+            "java-basic",
+            "java-empty",
+            "java-unnecessary",
+            "java-unusedcode",
+            "java-imports",
+            "java-braces",
+            "java-sunsecure",
+            "java-typeresolution",
+            'java-strings',
+            'java-design',
+            'java-optimizations',
+            'java-clone',
+            'java-finalizers'
+    ]
+}
+
+codenarc {
+    reportFormat = 'xml'
+    configFile = new File("${project.projectDir}/config/codenarc.xml")
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.enabled false
+    }
+}
+
+build.dependsOn jacocoTestReport
+jacocoTestReport.mustRunAfter check
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+    excludeFilter = file("$rootProject.projectDir/config/findbugs.xml")
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    tasks.findbugsIntegrationTest.enabled = false //findbug doesn't like groovy
+    tasks.findbugsGenerated.enabled = false //findbug doesn't like groovy
+    tasks.pmdGenerated.enabled = false //findbug doesn't like groovy
+}

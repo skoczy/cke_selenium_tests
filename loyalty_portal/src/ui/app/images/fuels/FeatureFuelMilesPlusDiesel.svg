@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>FeatureFuelMilesPlusDiesel@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="18.382557%" x2="50%" y2="70.9684196%" id="linearGradient-1">
+            <stop stop-color="#1691C1" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Fuel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup" transform="translate(-40.000000, -400.000000)" id="FeatureFuelMilesPlusDiesel">
+            <g sketch:type="MSLayerGroup" transform="translate(40.000000, 400.000000)">
+                <path d="M0.07,54.68 C0.07,24.628 24.518,0.18 54.57,0.18 C84.622,0.18 109.07,24.628 109.07,54.68 C109.07,84.732 84.622,109.18 54.57,109.18 C24.518,109.18 0.07,84.732 0.07,54.68 Z" id="Fill-1" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+                <path d="M57.005,37.086 C59.272,37.086 61.383,37.448 63.338,38.17 C65.293,38.893 66.985,39.978 68.414,41.423 C69.843,42.869 70.96,44.676 71.766,46.844 C72.57,49.013 72.973,51.559 72.973,54.483 C72.973,57.046 72.644,59.411 71.987,61.579 C71.33,63.747 70.337,65.62 69.005,67.197 C67.675,68.775 66.016,70.015 64.028,70.918 C62.04,71.822 59.699,72.274 57.005,72.274 L41.827,72.274 L41.827,37.086 L57.005,37.086 L57.005,37.086 Z M56.463,65.769 C57.58,65.769 58.664,65.588 59.716,65.226 C60.767,64.865 61.703,64.265 62.525,63.427 C63.346,62.589 64.003,61.497 64.496,60.15 C64.989,58.803 65.236,57.161 65.236,55.222 C65.236,53.448 65.063,51.846 64.718,50.417 C64.373,48.988 63.807,47.764 63.018,46.745 C62.229,45.727 61.186,44.946 59.889,44.405 C58.59,43.862 56.988,43.591 55.083,43.591 L49.564,43.591 L49.564,65.769 L56.463,65.769 L56.463,65.769 Z" id="Fill-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M54.57,102.866 C27.999,102.866 6.382,81.25 6.382,54.68 C6.382,28.109 27.999,6.493 54.57,6.493 C81.14,6.493 102.757,28.109 102.757,54.68 C102.757,81.25 81.14,102.866 54.57,102.866 L54.57,102.866 Z M54.57,10.738 C30.34,10.738 10.627,30.45 10.627,54.68 C10.627,78.909 30.34,98.622 54.57,98.622 C78.8,98.622 98.513,78.909 98.513,54.68 C98.513,30.45 78.8,10.738 54.57,10.738 L54.57,10.738 Z" id="Fill-3" fill="#F9FFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="set temporary closed --&gt;" timestamp="2016-02-09T17:51:00" hostname="localhost" time="8.787" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="set temporary closed --&gt;" name="should set range of dates" time="8.787" />
+ </testsuite>
+</testsuites>

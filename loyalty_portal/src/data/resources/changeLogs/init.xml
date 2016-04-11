@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="Piotr Janik" id="init">
+        <createSequence sequenceName="hibernate_sequence" startValue="1"/>
+        <createSequence sequenceName="revision_sequence" startValue="2"/>
+        <createSequence sequenceName="service_sequence" startValue="50"/>
+
+        <createTable tableName="persistentsession">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="persistentsession_pkey"/>
+            </column>
+            <column name="sessionid" type="VARCHAR(255)"/>
+            <column name="userid" type="VARCHAR(255)"/>
+        </createTable>
+        <createTable tableName="predefinedsearch">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="predefinedsearch_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="searchfilter">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="searchfilter_pkey"/>
+            </column>
+            <column name="field" type="VARCHAR(255)"/>
+            <column name="operator" type="INT"/>
+            <column name="predefinedsearch_id" type="BIGINT">
+                <constraints foreignKeyName="fk_searchfilter_predefinedsearch_id_ref_predefinedsearch_id" referencedTableName="predefinedsearch" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+        <createTable tableName="searchfilter_value">
+            <column name="searchfilter_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_searchfilter_value_searchfilter_id_ref_searchfilter_id" referencedTableName="searchfilter" referencedColumnNames="id"/>
+            </column>
+            <column name="value" type="VARCHAR(255)"/>
+        </createTable>
+        <createTable tableName="service">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="service_pkey"/>
+            </column>
+            <column name="displayname" type="VARCHAR(255)"/>
+            <column name="icon" type="VARCHAR(255)"/>
+            <column name="lang" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="dtype" type="VARCHAR(50)"/>
+        </createTable>
+        <createTable tableName="site">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="site_pkey"/>
+            </column>
+            <column name="alwaysopen" type="BOOL"/>
+            <column defaultValueNumeric="0" name="_version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="xcoord" type="VARCHAR(255)"/>
+            <column name="ycoord" type="VARCHAR(255)"/>
+            <column name="modifiedby" type="VARCHAR(200)"/>
+        </createTable>
+        <createTable tableName="openingtime">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="openingtime_pkey"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_openingtime_siteid_ref_site_id" referencedTableName="site" referencedColumnNames="id"/>
+            </column>
+            <column name="days" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="close" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="open" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="temporarilyclosed">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="temporarilyclosed_pkey"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_temporarilyclosed_siteid_ref_site_id" referencedTableName="site" referencedColumnNames="id"/>
+            </column>
+            <column name="from" type="date"/>
+            <column name="to" type="date"/>
+        </createTable>
+        <createTable tableName="site_fuel">
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_sitefuel_siteid_ref_site_id" referencedTableName="site" referencedColumnNames="id"/>
+            </column>
+            <column name="fuel_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_sitefuel_fuelid_ref_serviceid" referencedTableName="service" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+        <createTable tableName="site_service">
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_siteservice_siteid_ref_site_id" referencedTableName="site" referencedColumnNames="id"/>
+            </column>
+            <column name="service_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_siteservice_serviceid_ref_serviceid" referencedTableName="service" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+        <createTable tableName="sitepersonrole">
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="sitepersonrole_pkey"/>
+            </column>
+            <column name="fromjde" type="BOOL"/>
+            <column name="label" type="VARCHAR(255)"/>
+        </createTable>
+        <createTable tableName="siteperson">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="siteperson_pkey"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="externalid" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="phone" type="INT"/>
+            <column name="phonecc" type="INT"/>
+            <column name="role" type="VARCHAR(255)">
+                <constraints foreignKeyName="fk_sitepersons_role_ref_sitepersonrole_name" referencedTableName="sitepersonrole" referencedColumnNames="name"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints foreignKeyName="fk_siteperson_site_id_ref_site_id" referencedTableName="site" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+    <changeSet author="Piotr Janik" id="init-envers">
+        <createTable tableName="revisionentity">
+            <column name="id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="timestamp" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="aud_site">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="alwaysopen" type="BOOL"/>
+            <column name="xcoord" type="VARCHAR(255)"/>
+            <column name="xcoord_mod" type="BOOL"/>
+            <column name="ycoord" type="VARCHAR(255)"/>
+            <column name="ycoord_mod" type="BOOL"/>
+            <column name="fuels_mod" type="BOOL"/>
+            <column name="services_mod" type="BOOL"/>
+            <column name="sitepersons_mod" type="BOOL"/>
+            <column name="modifiedby" type="VARCHAR(200)"/>
+            <column name="modifiedby_mod" type="BOOL"/>
+        </createTable>
+        <createTable tableName="aud_openingtime">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="close" type="VARCHAR(255)"/>
+            <column name="days" type="VARCHAR(255)"/>
+            <column name="open" type="VARCHAR(255)"/>
+            <column name="site_id" type="BIGINT"/>
+        </createTable>
+
+        <createTable tableName="aud_service">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="displayname" type="VARCHAR(255)"/>
+            <column name="icon" type="VARCHAR(255)"/>
+            <column name="lang" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="dtype" type="VARCHAR(50)"/>
+        </createTable>
+
+
+        <createTable tableName="aud_site_fuel">
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fuel_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+        </createTable>
+
+        <createTable tableName="aud_site_service">
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="service_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+        </createTable>
+
+        <createTable tableName="aud_site_temporarilyclosed">
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+        </createTable>
+
+        <createTable tableName="aud_siteperson">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="externalid" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="phone" type="INT"/>
+            <column name="phonecc" type="INT"/>
+            <column name="role" type="VARCHAR(255)"/>
+            <column name="site_id" type="BIGINT"/>
+        </createTable>
+
+        <createTable tableName="aud_sitepersonrole">
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="fromjde" type="BOOL"/>
+            <column name="label" type="VARCHAR(255)"/>
+        </createTable>
+
+        <createTable tableName="aud_temporarilyclosed">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="SMALLINT"/>
+            <column name="from" type="date"/>
+            <column name="to" type="date"/>
+        </createTable>
+
+        <addPrimaryKey columnNames="id" constraintName="revisionentity_pkey" tableName="revisionentity"/>
+        <addPrimaryKey columnNames="id, rev" constraintName="aud_openingtime_pkey" tableName="aud_openingtime"/>
+        <addPrimaryKey columnNames="id, rev" constraintName="aud_service_pkey" tableName="aud_service"/>
+        <addPrimaryKey columnNames="rev, site_id, fuel_id" constraintName="aud_sitefuel_pkey" tableName="aud_site_fuel"/>
+        <addPrimaryKey columnNames="id, rev" constraintName="aud_site_pkey" tableName="aud_site"/>
+        <addPrimaryKey columnNames="rev, site_id, service_id" constraintName="aud_siteservice_pkey" tableName="aud_site_service"/>
+        <addPrimaryKey columnNames="rev, site_id, id" constraintName="aud_site_temporarilyclosed_pkey" tableName="aud_site_temporarilyclosed"/>
+        <addPrimaryKey columnNames="id, rev" constraintName="aud_siteperson_pkey" tableName="aud_siteperson"/>
+        <addPrimaryKey columnNames="name, rev" constraintName="aud_sitepersonrole_pkey" tableName="aud_sitepersonrole"/>
+        <addPrimaryKey columnNames="id, rev" constraintName="aud_temporarilyclosed_pkey" tableName="aud_temporarilyclosed"/>
+
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_site_service" constraintName="fk_aud_siteservice_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_sitepersonrole" constraintName="fk_aud_sitepersonrole_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_openingtime" constraintName="fk_aud_openingtime_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_siteperson" constraintName="fk_aud_siteperson_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_site_temporarilyclosed" constraintName="fk_aud_sitetemporarilyclosed_rev" deferrable="false" initiallyDeferred="false"
+                                 onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_site_fuel" constraintName="fk_aud_sitefuel_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_site" constraintName="fk_aud_site_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_temporarilyclosed" constraintName="fk_aud_temporarilyclosed_rev" deferrable="false" initiallyDeferred="false"
+                                 onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="aud_service" constraintName="fk_aud_service_rev" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+                                 onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="revisionentity"/>
+
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="temporarilyclosed" constraintName="fk_aud_temporarilyclosed_siteid" deferrable="false" initiallyDeferred="false"
+                                 onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="site"/>
+
+        <insert tableName="revisionentity">
+            <column name="id" value="1"/>
+            <column name="timestamp" valueNumeric="1449508200120"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

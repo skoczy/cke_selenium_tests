@@ -1,0 +1,22 @@
+# Starts a selenium hub and adds two workes.
+# Example:
+# To start: docker-compose -f docker-selenium.yml up -d --force-recreate
+# To stop: docker-compose -f docker-selenium.yml stop
+
+e2e-app:
+  build: .
+  dockerfile: Dockerfile.Build
+  # links:
+    # - selenium-hub:hub
+  # dns:
+    # - 172.17.0.1
+  # extra_hosts:
+  #  - sitemaster-rds-test.cxhawdkaaflk.eu-west-1.rds.amazonaws.com:10.1.5.164
+  ports:
+    - 8888:8080
+  volumes:
+    - .:/workspace
+    - /var/lib/jenkins/gradleCaches/sitemaster-e2e-app/:/root/.gradle:rw
+  environment:
+    - NODE_PATH=/npm
+  command: bash -c "java -Dapplication.environment=TEST -Dhibernate.connection.url=jdbc:postgresql://sitemaster-rds-test.cxhawdkaaflk.eu-west-1.rds.amazonaws.com:5432/sitemasterintegtest -Dhibernate.connection.username=siteintegtestuser -Dhibernate.connection.password=EUykC4ktadSfgy3o -jar build/libs/siterumasteru-all-*.jar"

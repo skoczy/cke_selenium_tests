@@ -1,0 +1,52 @@
+[
+    {
+        "fieldName": "stationName",
+        "label": "Station name",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "address",
+        "label": "Address",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "zip",
+        "label": "ZIP-code",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "city",
+        "label": "City",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "country",
+        "label": "Country",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "dataSteward",
+        "label": "Data steward",
+        "owner": "Sitemaster"
+    },
+    {
+        "fieldName": "asm",
+        "label": "Area Sales Manager",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "stationManager",
+        "label": "Station Manager",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "districtManager",
+        "label": "District Manager",
+        "owner": "JDE"
+    },
+    {
+        "fieldName": "email",
+        "label": "E-mail",
+        "owner": "Sitemaster"
+    }
+]

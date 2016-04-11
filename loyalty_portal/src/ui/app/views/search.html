@@ -1,0 +1,52 @@
+<div class="grid-content" id="content">
+  <div class="grid-block vertical">
+    <div class="grid-content" id="search-header">
+      <div class="grid-block">
+        <div class="grid-content header">
+          <h1 translate>RESULTS</h1>
+          <h2>{{ 'NUMBER_OF_SITES_FOUND' | translate:{'count' : resultCount} }}</h2>
+        </div>
+        <div class="grid-content text-right">
+          <a class="button secondary hide-for-print" ng-print print-element-id="content" translate>PRINT</a>
+          <a class="button secondary hide-for-print" ng-click="getCsvData()">{{ 'EXPORT' | translate }}</a>
+        </div>
+      </div>
+
+      <div id="column-select" class="hide-for-print right" ng-class="{ 'active' : showColumnList }" click-anywhere-else="showColumnList = false">
+        <div id="column-list-trigger">
+          <a ng-click="showColumnList = !showColumnList">
+            {{ !showColumnList ? 'FILTER_COLUMNS' : 'CLOSE' | translate }}
+            <img src="/images/expand.svg" class="text-size">
+          </a>
+        </div>
+        <div id="column-list" ng-show="showColumnList">
+          <div ng-repeat="field in headers">
+            <label><input type="checkbox" ng-model="field.active"> {{ field.label }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-content" id="search-results" ng-if="resultCount">
+      <table st-table="results" class="table">
+      	<thead id="search-results-header">
+        	<tr>
+        		<th ng-repeat="field in activeHeaders()" st-sort="{{ getFieldName(field.fieldName) }}" class="{{ getFieldName(field.fieldName) }}">{{ field.label }}</th>
+        	</tr>
+      	</thead>
+      	<tbody>
+        	<tr ng-repeat="site in results">
+        		<td ng-repeat="field in activeHeaders()" class="{{ getFieldName(field.fieldName) }}"><a ui-sref="siteGeneralData({ id: site.id })">{{ getFieldValue(site, field.fieldName) }}</a></td>
+        	</tr>
+      	</tbody>
+
+        <tfoot class="hide-for-print">
+    			<tr>
+    				<td colspan="99" class="text-center">
+    					<div st-pagination="" st-items-by-page="perPage" st-displayed-pages="7"></div>
+    				</td>
+    			</tr>
+    		</tfoot>
+      </table>
+    </div>
+  </div>
+</div>

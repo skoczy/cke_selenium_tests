@@ -1,0 +1,9 @@
+<tr class="custom-field">
+  <td class="field-label"><label for="{{ customField.fieldName }}">{{ customField.label }}</label></td>
+  <td class="field-indicator"><div class="indicator from-{{ customField.owner }}"></div></td>
+  <td class="field-value">
+    <input type="text" name="{{ customField.fieldName }}" ng-readonly="customField.fieldDisabled()" ng-model="customField.value">
+    <div ng-show="input.$error.required" class="form-error" translate>FIELD_CANNOT_BE_EMPTY</div>
+  </td>
+  <td class="field-description" ng-if="customField.description"><div class="field-info">{{ customField.description }}</div></td>
+</tr>

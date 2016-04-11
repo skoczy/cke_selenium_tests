@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet id="migrated-osm-data" author="Piotr Janik">
+        <loadData tableName="site" file="generated_sites.csv" relativeToChangelogFile="true">
+            <column name="id" type="NUMERIC"/>
+            <column name="alwaysopen" type="BOOLEAN"/>
+            <column name="_version" type="NUMERIC"/>
+            <column name="xcoord" type="STRING"/>
+            <column name="ycoord" type="STRING"/>
+        </loadData>
+        <sql>
+            INSERT INTO aud_site (id, alwaysopen, xcoord, ycoord, rev, revtype) SELECT id, alwaysopen, xcoord, ycoord, '1' AS "rev", '0' AS "revtype" FROM site;
+        </sql>
+        <loadData tableName="openingtime" file="generated_openingtimes.csv" relativeToChangelogFile="true">
+            <column name="id" type="NUMERIC"/>
+            <column name="site_id" type="NUMERIC"/>
+            <column name="days" type="STRING"/>
+            <column name="close" type="STRING"/>
+            <column name="open" type="STRING"/>
+        </loadData>
+        <sql>
+            INSERT INTO aud_openingtime (id, site_id, days, close, open, rev, revtype) SELECT id, site_id, days, close, open, '1' AS "rev", '0' AS "revtype" FROM openingtime;
+        </sql>
+        <loadData tableName="site_service" file="generated_services.csv" relativeToChangelogFile="true">
+            <column name="site_id" type="NUMERIC"/>
+            <column name="service_id" type="NUMERIC"/>
+        </loadData>
+        <sql>
+            INSERT INTO aud_site_service (site_id, service_id, rev, revtype) SELECT site_id, service_id, '1' AS "rev", '0' AS "revtype" FROM site_service;
+        </sql>
+        <loadData tableName="site_fuel" file="generated_fuels.csv" relativeToChangelogFile="true">
+            <column name="site_id" type="NUMERIC"/>
+            <column name="fuel_id" type="NUMERIC"/>
+        </loadData>
+        <sql>
+            INSERT INTO aud_site_fuel (site_id, fuel_id, rev, revtype) SELECT site_id, fuel_id, '1' AS "rev", '0' AS "revtype" FROM site_fuel;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

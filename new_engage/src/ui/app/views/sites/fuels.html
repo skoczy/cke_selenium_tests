@@ -1,0 +1,51 @@
+<div cg-busy="loadSite" class="loading-wrap"></div>
+<div class="grid-block vertical" id="content">
+  <div id="stationID" class="grid-block">
+    <div class="grid-content">
+      <h1 class="id">{{ 'STATION_ID' | translate }}: {{ siteId }}</h1>
+      <h3>{{ site.stationName }}</h3>
+      <span class="status">{{ 'STATUS' | translate }}: {{ 'STATION_IS' | translate }} {{ site.status }}</span>
+    </div>
+  </div>
+  <div  id="generalData" class="grid-block">
+    <div class="grid-content">
+      <h2 class="hide-for-print">{{ 'FUELS' | translate }}</h2>
+    </div>
+    <div class="grid-content text-right">
+      <a class="button secondary hide-for-print" ng-print print-element-id="content" translate>PRINT</a>
+      <a class="button secondary hide-for-print" ng-click="getCsvData()">{{ 'EXPORT' | translate }}</a>
+    </div>
+  </div>
+
+  <div id="fuels" class="grid-block vertical" ng-show="site">
+    <div class="grid-content">
+      <div class="grid-block">
+        <form class="grid-content" ng-submit="saveFuels()" name="fuelsForm" novalidate>
+          <div class="small-12 medium-12 large-11 xlarge-8 xxlarge-6">
+            <table class="site-fuels">
+              <thead>
+                <tr>
+                  <th translate>FUEL_TYPE</th>
+                </tr>
+              </thead>
+              <tr ng-repeat="fuel in site.fuels">
+                <td class="fuel-name">
+                  <select ng-model="site.fuels[$index]" ng-options="type.name for type in getUnusedFuels(fuel) track by type.id">
+                </td>
+                <td class="icon">
+                  <img ng-show="fuel" ng-src="/images/fuels/{{ fuel.icon }}.svg">
+                </td>
+                <td class="remove hide-for-print"><a ng-click="removeFuel(fuel)" translate>REMOVE</a></td>
+              </tr>
+            </table>
+            <p><a class="hide-for-print" ng-if="getUnusedFuels().length > 0" ng-click="addFuel()" translate>ADD_NEW_FUEL</a></p>
+          </div>
+          <div class="small-12">
+            <input type="submit" class="button hide-for-print" value="{{ 'SAVE' | translate }}">
+            <input type="button" class="button secondary hide-for-print" value="{{ 'CANCEL' | translate }}" ng-click="resetFuels()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

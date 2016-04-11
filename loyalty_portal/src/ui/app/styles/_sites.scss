@@ -1,0 +1,281 @@
+
+// General data view - to be exported in separate scss //
+#stationID {
+  padding: 1rem 0 0 0;
+  border-bottom: 1px solid $gray-dark;
+
+  span.status {
+    display: block;
+    float: left;
+    padding: 1.3rem;
+
+    a {
+      color: $body-font-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h1 {
+    margin-top: .8rem;
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    float: left;
+    margin-top: .5rem;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+#generalData {
+  padding: 1rem 0 1rem 0;
+
+  h2 {
+    float: left;
+  }
+
+  span.datasteward {
+    display: block;
+    float: left;
+    padding:1rem 0 0 2rem;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+}
+
+.page-siteGeneralData {
+  .site-services {
+    background-color: $body-background;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    @include breakpoint(large) {
+      margin-top: 0;
+    }
+
+    h3 {
+      @extend th;
+      padding: 1rem 0 .5rem;
+      font-family: $body-font-family;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    img {
+      max-height: 2rem;
+      padding-right: .7rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+#generaldata-misc {
+  margin-left: 1rem;
+  background-color: $body-background;
+}
+
+.changelog {
+  .modal {
+    overflow-y: auto;
+  }
+
+  table {
+    width: 100%;
+
+    tbody:nth-child(2n) {
+      background: #f0f0f0;
+    }
+
+    td, th {
+      padding: .5rem;
+
+      &.rowspan {
+        vertical-align: top;
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid #ccc;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .changelog-from {
+    color: $alert-color;
+  }
+}
+
+// Custom fields display and editing
+#custom-fields {
+  padding: 1rem;
+
+  .legend {
+    padding: 1rem 1rem 2rem;
+    font-size: .9rem;
+
+    .indicator-wrap {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+  }
+
+  .custom-field {
+    column-count: 3;
+
+    td {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+
+    .field-label {
+      padding-right: 2rem;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-indicator {
+      padding: 0 .5rem;
+    }
+
+    .field-value {
+      min-width: rem-calc(300);
+
+      input {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-description {
+      padding-left: .5rem;
+      cursor: help;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 1.1rem;
+        height: 1.1rem;
+        background: url(../images/info.svg) center center no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .field-info {
+        display: none;
+      }
+
+      &:hover {
+        .field-info {
+          display: block;
+          position: absolute;
+          margin-top: -.65rem;
+          margin-left: .65rem;
+          background: white;
+          border: 1px solid $gray-dark;
+          padding: .7rem 1rem;
+          font-size: .8rem;
+          line-height: 1.2rem;
+          max-width: 15%;
+          box-shadow: 1px 1px 1px 0px rgba($body-font-color, 0.1);
+        }
+      }
+    }
+  }
+}
+
+.indicator {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+
+  &:after {
+    content: "";
+    background: $primary-color;
+    opacity: .5;
+    border-radius: 50%;
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    position: relative;
+    bottom: 0;
+  }
+
+  &.from-JDE:after {
+    opacity: 1;
+  }
+}
+
+// Sites persons
+.phone {
+  width: 30%;
+
+  .phone-cc {
+    float: left;
+    width: 30%;
+    position: relative;
+
+    input {
+      padding-left: 1rem;
+    }
+
+    &:before {
+      content: "+";
+      display: block;
+      position: absolute;
+      left: .3rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .phone-number {
+    float: left;
+    width: 69%;
+    margin-left: 1%;
+  }
+}
+
+// Services view
+table.site-services, table.site-persons, table.site-fuels {
+  width: 100%;
+
+  td {
+    vertical-align: middle;
+    padding: .5rem .5rem .5rem 0;
+
+    &.icon {
+      width: 3rem;
+
+      img {
+        width: auto;
+        max-height: 2rem;
+      }
+    }
+
+    &.remove {
+      font-size: .8em;
+    }
+  }
+
+  th {
+    font-size: .85em;
+    padding: .5rem 0;
+  }
+
+  select {
+    margin: 0;
+  }
+}

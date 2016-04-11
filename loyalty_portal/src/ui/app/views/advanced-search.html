@@ -1,0 +1,83 @@
+<div id="search-filters-form" class="grid-content popout" ng-show="advancedSearch">
+  <div class="grid-content">
+    <div class="grid-block vertical">
+      <div class="grid-content">
+        <div class="grid-block">
+          <div class="small-12 medium-8">
+              <h4>{{ 'SAVED_SEARCH' | translate }}</h4>
+              <select name="predefined" ng-model="savedSearch" ng-options="search.name for search in savedSearches track by search.id">
+              </select>
+          </div>
+
+          <div id="search-actions" class="small-12 medium-4 text-right">
+            <a id="delete-search" translate zf-popup-toggle="approve-delete" ng-show="savedSearch.id != 0">DELETE_SEARCH</a>
+            <a id="save-search" ng-click="saveSearch()" translate>SAVE_SEARCH</a>
+
+            <zf-popup id="approve-delete" class="padding">
+              <p translate>DO_YOU_WANT_TO_DELETE_SEARCH</p>
+              <a zf-popup-toggle="approve-delete" ng-click="deleteSearch()" class="button" translate>YES</a>
+              <a zf-popup-toggle="approve-delete" class="secondary button" ng-click="keepAdvancedSearch()" translate>CANCEL</a>
+            </zf-popup>
+
+            <div id="save-search-popup" ng-show="showSaveForm" class="text-left padding popout">
+              <ng-form name="saveSearchForm" ng-submit="doSaveSearch()">
+                <input type="text" name="saveSearchName" id="saveSearchName" ng-model="savedSearch.name" placeholder="{{ 'NAME' | translate }}" required>
+                <input type="submit" name="submit" class="button" value="{{ 'SAVE' | translate }}" ng-click="doSaveSearch()">
+                <a class="secondary" ng-click="cancelSaveSearch()" translate>CANCEL</a>
+              </ng-form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-filter-row grid-content" ng-repeat="searchFilter in searchFilters">
+        <ng-form name="searchFilterForm" class="grid-block">
+          <div class="small-12 medium-3">
+            <select
+              name="searchField"
+              ng-model="searchFilter.field"
+              ng-options="getFieldLabel(field) for field in searchFields"
+              required
+            >
+              <option value="">Select field</option>
+            </select>
+          </div>
+
+          <div class="small-12 medium-3 grid-content">
+            <select name="operator" ng-model="searchFilter.operator">
+              <option value="EQUALS" translate>IS_EXACTLY</option>
+              <option value="NOT_EQUALS" translate>IS_NOT</option>
+              <option value="LIKE" translate>INCLUDES</option>
+              <option value="NOT_LIKE" translate>DOES_NOT_INCLUDE</option>
+            </select>
+          </div>
+
+          <div class="small-12 medium-6 grid-content search-filter-criteria">
+            <!--<input type="text" name="value" ng-model="searchFilter.value" required>-->
+
+            <oi-select
+              name="searchField"
+              ng-model="searchFilter.value"
+              oi-options="option for option in []"
+              oi-select-options="{
+                newItem: true,
+                saveTrigger: 'enter, blur',
+                newItemFn: 'addItem($query)'
+              }"
+              multiple
+            ></oi-select>
+            <a class="remove-row" ng-click="removeSearchFilter($index)" translate>REMOVE</a>
+          </div>
+
+        </ng-form>
+      </div>
+
+      <div><a id="add-search-row" ng-click="addSearchFilter()" translate>ADD_CRITERIA</a></div>
+    </div>
+
+    <div class="grid-block">
+      <input type="submit" class="button secondary" value="{{ 'SEARCH' | translate }}" ng-click="doAdvancedSearch()">
+      <a class="secondary cancel-search" ng-click="cancelSearch()" translate>CANCEL</a>
+    </div>
+  </div>
+</div>

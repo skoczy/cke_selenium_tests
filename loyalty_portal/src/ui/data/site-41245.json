@@ -1,0 +1,114 @@
+{
+    "id": "41245",
+    "siteId": "41245",
+    "status": 1,
+    "openingInfo": {
+        "openAlways": false,
+        "openingTimes": {
+            "weekdays": {
+                "open": "06:00",
+                "close": "23:00"
+            },
+            "saturday": {
+                "open": "07:00",
+                "close": "23:00"
+            },
+            "sunday": {
+                "open": "07:00",
+                "close": "23:00"
+            }
+        },
+        "tempClosed": {
+            "from": "",
+            "to": ""
+        },
+        "weekdays": {
+            "open": "6:00",
+            "close": "21:00"
+        },
+        "saturday": {
+            "open": "6:00",
+            "close": "21:00"
+        },
+        "sunday": {
+            "open": "8:00",
+            "close": "20:00"
+        }
+    },
+    "fields": [
+        {
+            "fieldName": "stationName",
+            "label": "Station name",
+            "owner": "JDE",
+            "value": "STATOIL TØNDER",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "address",
+            "label": "Address",
+            "owner": "JDE",
+            "value": "Ndr. Landevej 8",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "zip",
+            "label": "ZIP-code",
+            "owner": "JDE",
+            "value": "6270",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "city",
+            "label": "City",
+            "owner": "JDE",
+            "value": "Tønder",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "country",
+            "label": "Country",
+            "owner": "JDE",
+            "value": "Denmark",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "dataSteward",
+            "label": "Data steward",
+            "owner": "Sitemaster",
+            "description": "Shared with Heat, Edge and Mobile app",
+            "value": "Annette Annettesson"
+        },
+        {
+            "fieldName": "asm",
+            "label": "Area Sales Manager",
+            "owner": "JDE",
+            "value": "Bente Bentesen",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "stationManager",
+            "label": "Station Manager",
+            "owner": "JDE",
+            "value": "Monica Borgbjerg",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "districtManager",
+            "label": "District Manager",
+            "owner": "JDE",
+            "value": "Morten Christensen",
+            "description": "Shared with Heat, Edge and Mobile app"
+        },
+        {
+            "fieldName": "email",
+            "label": "E-mail",
+            "owner": "Sitemaster",
+            "value": "monbor@statoilfuelretail.com",
+            "description": "Shared with Heat, Edge and Mobile app"
+        }
+    ],
+    "createdBy": "9069490502588451",
+    "updatedAt": "2015-07-02T09:03:51.348Z",
+    "createdAt": "2015-06-21T14:06:57.189Z",
+    "type": "site"
+}

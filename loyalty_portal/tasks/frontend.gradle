@@ -1,0 +1,51 @@
+
+/*
+ * Copyright (c) 2016 Statoil Fuel & Retail ASA
+ * All rights reserved.
+ *
+ * This code is proprietary and the property of Statoil Fuel & Retail ASA. It may not be
+ * distributed without written permission from Statoil Fuel & Retail ASA.
+ */
+
+task npmInstall(type: NpmTask) {
+    npmArgs = 'install'
+    workingDir = file("${project.projectDir}/src/ui")
+}
+
+task buildFrontend(type: GulpTask) {
+    gulpArgs = 'prod'
+    workingDir = file("${project.projectDir}/src/ui")
+}
+build.dependsOn buildFrontend
+
+class NpmTask extends Exec {
+    private String executable = "npm"
+    private String switches = "--no-color"
+
+    String npmArgs = ""
+
+    public NpmTask() {
+        super()
+        this.setExecutable(executable)
+    }
+
+    public void setNpmArgs(String nodeArgs) {
+        this.args = "$switches $nodeArgs".trim().split(" ") as List
+    }
+}
+
+class GulpTask extends Exec {
+    private String executable = "gulp"
+    private String switches = "--no-color"
+
+    String gulpArgs = ""
+
+    public GulpTask() {
+        super()
+        this.setExecutable(executable)
+    }
+
+    public void setGulpArgs(String gulpArgs) {
+        this.args = "$switches $gulpArgs".trim().split(" ") as List
+    }
+}

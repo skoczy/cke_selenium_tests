@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Site Persons" timestamp="2016-02-03T14:03:37" hostname="localhost" time="124.056" errors="0" tests="2" skipped="0" disabled="0" failures="2">
+  <testcase classname="Site Persons" name="should add new site person" time="62.01">
+   <failure type="exception" message="Failed: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25 milliseconds
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
+System info: host: &apos;LTF11040&apos;, ip: &apos;10.24.68.130&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_71&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\tomsko\AppData\Local\Temp\scoped_dir4404_29577}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=47.0.2526.111, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5b8ce6a5d18797983d8329fb2806762f"><![CDATA[InvalidElementStateError: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
+System info: host: 'LTF11040', ip: '10.24.68.130', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_71'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\tomsko\AppData\Local\Temp\scoped_dir4404_29577}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=47.0.2526.111, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5b8ce6a5d18797983d8329fb2806762f
+    at new bot.Error (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\atoms\error.js:108:18)
+    at Object.bot.response.checkResponse (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\atoms\response.js:109:9)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver\webdriver.js:379:20
+    at [object Object].promise.Promise.goog.defineClass.invokeCallback_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1337:14)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_.execute_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2776:14)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2758:21)
+    at goog.async.run.processWorkQueue (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\async\run.js:124:15)
+    at process._tickCallback (node.js:401:9)
+Error
+    at [object Object].ElementArrayFinder.applyAction_ (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:382:21)
+    at [object Object].ElementArrayFinder.(anonymous function) [as clear] (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:78:17)
+    at [object Object].ElementFinder.(anonymous function) [as clear] (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:711:7)
+    at [object Object].setSearch (F:\siterumasteru\src\ui\test\e2e\pageObjects\main.page.js:10:21)
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:17:18)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:96:23
+    at [object Object].promise.Promise.goog.defineClass.constructor (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1056:7)
+    at new wrappedCtr (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\base.js:2468:26)
+    at controlFlowExecute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:82:18)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_.execute_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2776:14)
+From: Task: Run it("should add new site person") in control flow
+    at Object.<anonymous> (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:81:14)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at QueueRunner.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:627:35)
+    at Spec.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:353:10)
+    at Object.fn (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:2360:37)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at QueueRunner.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1762:10)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:12:5)
+    at addSpecsToSuite (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:743:25)
+    at Env.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:713:7)
+    at jasmineInterface.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:3219:18)
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:1:1)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Site Persons" name="should remove a site person" time="62.046">
+   <failure type="exception" message="Failed: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
+System info: host: &apos;LTF11040&apos;, ip: &apos;10.24.68.130&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_71&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\tomsko\AppData\Local\Temp\scoped_dir4404_29577}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=47.0.2526.111, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5b8ce6a5d18797983d8329fb2806762f"><![CDATA[InvalidElementStateError: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.1 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
+System info: host: 'LTF11040', ip: '10.24.68.130', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_71'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\tomsko\AppData\Local\Temp\scoped_dir4404_29577}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=47.0.2526.111, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5b8ce6a5d18797983d8329fb2806762f
+    at new bot.Error (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\atoms\error.js:108:18)
+    at Object.bot.response.checkResponse (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\atoms\response.js:109:9)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver\webdriver.js:379:20
+    at [object Object].promise.Promise.goog.defineClass.invokeCallback_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1337:14)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_.execute_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2776:14)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2758:21)
+    at goog.async.run.processWorkQueue (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\async\run.js:124:15)
+    at process._tickCallback (node.js:401:9)
+Error
+    at [object Object].ElementArrayFinder.applyAction_ (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:382:21)
+    at [object Object].ElementArrayFinder.(anonymous function) [as clear] (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:78:17)
+    at [object Object].ElementFinder.(anonymous function) [as clear] (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\lib\element.js:711:7)
+    at [object Object].setSearch (F:\siterumasteru\src\ui\test\e2e\pageObjects\main.page.js:10:21)
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:50:18)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:96:23
+    at [object Object].promise.Promise.goog.defineClass.constructor (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1056:7)
+    at new wrappedCtr (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\goog\base.js:2468:26)
+    at controlFlowExecute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:82:18)
+    at [object Object].promise.ControlFlow.goog.defineClass.goog.defineClass.abort_.error.executeNext_.execute_ (C:/Users/tomsko/AppData/Roaming/npm/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2776:14)
+From: Task: Run it("should remove a site person") in control flow
+    at Object.<anonymous> (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:81:14)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at QueueRunner.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:627:35)
+    at Spec.execute (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:353:10)
+    at Object.fn (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:2360:37)
+    at attemptAsync (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1819:24)
+    at QueueRunner.run (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1774:9)
+    at C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1801:16
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:45:5)
+    at addSpecsToSuite (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:743:25)
+    at Env.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:713:7)
+    at jasmineInterface.describe (C:\Users\tomsko\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:3219:18)
+    at Object.<anonymous> (F:\siterumasteru\src\ui\test\e2e\sitePersons.spec.js:1:1)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>

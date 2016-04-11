@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "name": "All Oslo stations",
+    "filters": [
+      {
+        "field": "stationId",
+        "operator": "equals",
+        "value": [
+          "57042",
+          "57033"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Oslo east stations",
+    "filters": [
+      {
+        "field": "city",
+        "operator": "equals",
+        "value": [
+          "Oslo"
+        ]
+      },
+      {
+        "field": "zip",
+        "operator": "equals",
+        "value": [
+          "04*",
+          "05*",
+          "06*"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+dtype,id,displayname,icon,lang,type
+SERVICE,1,Car rental,FeatureCarRental,en,Car rental
+SERVICE,2,Trailer rental,FeatureTrailerRental,en,Trailer rental
+SERVICE,3,Simply Great Coffee,FeatureCoffee,en,Simply Great Coffee
+SERVICE,4,Routex Atlas,FeatureRoutexAtlas,en,Routex Atlas
+SERVICE,5,TruckDiesel Network,FeatureTruckDiesel,en,TruckDiesel Network
+SERVICE,6,Shower,FeatureShower,en,Shower
+SERVICE,7,Car wash,FeatureCarWash,en,Car wash
+SERVICE,8,Car wash jetwash,FeatureCarWashJetWash,en,Car wash jetwash
+SERVICE,9,Truck parking,FeatureTruckParking,en,Truck parking
+SERVICE,10,Lounge,FeatureTruckersLounge,en,Lounge
+SERVICE,11,AdBlue,FeatureAdBlue,en,AdBlue
+SERVICE,12,Made to Go fast food,FeatureHotDog,en,Made to Go fast food
+SERVICE,13,Windshield liquid on pump,FeatureWasherFluidPump,en,Windshield liquid on pump
+SERVICE,14,High speed charger,FeatureHighSpeedCharger,en,High speed charger
+SERVICE,15,Wifi,FeatureWifi,en,Wifi
+SERVICE,16,ATM,FeatureCashPayment,en,ATM
+FUEL,17,AdBlue Fuel,FeatureFuelAdBlue,en,AdBlue
+FUEL,18,Agro Diesel,FeatureFuelDieselAgro,en,Agro Diesel
+FUEL,19,B100,FeatureFuelB100,en,B100
+FUEL,20,Bensin 95,FeatureFuelMiles95,en,Bensin 95
+FUEL,21,Bensin 98,FeatureFuelMiles98,en,Bensin 98
+FUEL,22,Blyfri 92,FeatureFuelMiles92,en,Blyfri 92
+FUEL,23,Blyfri 95,FeatureFuelMiles95,en,Blyfri 95
+FUEL,24,CNG,FeatureFuelB100,en,CNG
+FUEL,25,Diesel,FeatureFuelMilesDiesel,en,Diesel
+FUEL,26,Diesel B14,FeatureFuelMilesDiesel,en,Diesel B14
+FUEL,27,Diesel Bio,FeatureFuelMilesDiesel,en,Diesel Bio
+FUEL,28,Diesel B7,FeatureFuelMilesDiesel,en,Diesel B7
+FUEL,29,E85,FeatureFuelE85,en,E85
+FUEL,30,ED95,FeatureFuelED95,en,ED95
+FUEL,31,Fordonsgas,FeatureFuelFordon,en,Fordonsgas
+FUEL,32,Fortis 95,FeatureFuelFortis95,en,Fortis 95
+FUEL,33,Fortis Diesel,FeatureFuelFortisDiesel,en,Fortis Diesel
+FUEL,34,Gasoline 92,FeatureFuelMiles92,en,Gasoline 92
+FUEL,35,Gasoline 95,FeatureFuelMiles95,en,Gasoline 95
+FUEL,36,HVO100,FeatureFuelHVO100,en,HVO100
+FUEL,37,Hydrogen,,en,Hydrogen
+FUEL,38,LPG,FeatureFuelLPG,en,LPG
+FUEL,39,miles 92,FeatureFuelMiles92,en,miles 92
+FUEL,40,miles 95,FeatureFuelMiles95,en,miles 95
+FUEL,41,miles 98,FeatureFuelMiles98,en,miles 98
+FUEL,42,miles Diesel,FeatureFuelMilesDiesel,en,miles Diesel
+FUEL,43,miles Diesel B30,FeatureFuelMilesDiesel,en,miles Diesel B30
+FUEL,44,miles Diesel Bio,FeatureFuelMilesDiesel,en,miles Diesel Bio
+FUEL,45,milesPLUS 95,FeatureFuelMilesPlus95,en,milesPLUS 95
+FUEL,46,milesPLUS 98,FeatureFuelMilesPlus98,en,milesPLUS 98
+FUEL,47,milesPLUS Diesel,FeatureFuelMilesPlusDiesel,en,milesPLUS Diesel
+FUEL,48,Supragaz,FeatureFuelLPG,en,Supragaz

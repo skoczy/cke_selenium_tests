@@ -1,0 +1,40 @@
+<div class="grid-block align-center">
+    <div id="signin" class="grid-content small-12 large-5 medium-6">
+      <dic class="grid-block vertical">
+        <div class="grid-content">
+          <h1>{{ 'SIGN_IN' | translate }}<a href="#" zf-popup-toggle="info">{{ 'INFO' | translate }}</a></h1>
+        </div>
+        <div class="grid-content">
+          <zf-popup id="info" class="padding">
+            <h2 translate>TIP</h2>
+            <p translate>SIGN_IN_INFO</p>
+            <a href="#" zf-popup-toggle="info" translate>OK_LONG</a>
+          </zf-popup>
+          <form ng-submit="login()" class="grid-block">
+            <div class="small-12 grid-content">
+              <label for="username" translate>USERNAME</label>
+              <input type="text" name="username" ng-model="username" placeholder="{{ 'USERNAME' | translate}}">
+            </div>
+
+            <div class="small-12 grid-content">
+              <label for="password" translate>PASSWORD</label>
+              <input type="password" name="password" ng-model="password" placeholder="{{ 'PASSWORD' | translate }}">
+
+              <div class="label alert" ng-if="errorMessage">{{ errorMessage }}</div>
+              <div class="label warning" ng-show="errorMessage && loginGeneralError">
+                <p>The user service is having a minor meltdown at the moment, and this may be why you can't log in. Working on it!</p>
+                <a ng-click="loginGeneralError = false">Ok, got it</a>
+              </div>
+            </div>
+
+            <div class="small-12 medium-4 grid-content">
+              <language-selector></language-selector>
+            </div>
+            <div class="small-12 medium-8 grid-content">
+              <input class="button large primary signin" type="submit" name="signin" value="{{ 'SIGN_IN' | translate }}">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

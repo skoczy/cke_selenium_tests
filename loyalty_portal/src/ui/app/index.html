@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statoil Fuel &amp; Retail - Sitemaster</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+    <script src="/js/dependencies.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <div class="grid-frame vertical" ng-controller="GeneralController as mainCtrl">
+      <div class="menu-group primary title-bar hide-for-print">
+        <div class="menu-group-left">
+          <ul class="primary menu-bar">
+            <li ng-if="isLoggedIn()" id="sidebar-toggle" ng-click="sidebarToggle()" ng-class="{ 'active': sidebarVisible }"><a></a></li>
+            <li class="title"><a href="/">Sitemaster</a></li>
+            <li class="search" ng-show="isLoggedIn()">
+                <div>
+                <span class="inline-label searchbar" click-anywhere-else="hideAdvancedSearch()">
+                  <form name="mainCtrl.searchForm" ng-submit="simpleSearch()" method="POST" novalidate>
+                    <input type="text" name="searchValue" ng-model="search.searchValue" placeholder="{{ 'STATION_ID' | translate }}" pattern="\d*" required>
+                    <input type="submit" name="submit" value="{{ 'SEARCH' | translate }}">
+                  </form>
+
+                  <advanced-search></advanced-search>
+                </span>
+                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-group-right">
+          <ul class="primary menu-bar">
+            <li ng-if="isLoggedIn()" class="user"><span><a ng-click="logout()" translate>SIGN_OUT</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-block page-{{ controller }}">
+        <nav id="sidebar" ng-show="sidebarVisible" ui-view="sidebar"></nav>
+        <div id="content" class="grid-block wrap" ui-view="content"></div>
+      </div>
+    </div>
+
+    <zf-notification-set id="main-notifications" position="top-middle"></zf-notification-set>
+    <zf-notification-set id="error-notifications" position="top-middle"></zf-notification-set>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="58px" viewBox="0 0 31 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>FeatureIceCream</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Map" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="FeatureIceCream" sketch:type="MSArtboardGroup" transform="translate(-22.000000, -8.000000)" fill="#000000">
+            <g sketch:type="MSLayerGroup" transform="translate(22.000000, 8.000000)" id="Imported-Layers">
+                <path d="M15.257,0 C6.844,0 0,6.844 0,15.256 L0,41.489 C0,43.239 1.424,44.663 3.174,44.663 L9.956,44.663 L9.956,52.699 C9.956,55.622 12.334,58 15.257,58 C18.18,58 20.558,55.622 20.558,52.699 L20.558,44.663 L27.34,44.663 C29.09,44.663 30.514,43.239 30.514,41.489 L30.514,15.256 C30.514,6.844 23.67,0 15.257,0 L15.257,0 Z M17.558,52.699 C17.558,53.968 16.526,55 15.257,55 C13.989,55 12.956,53.968 12.956,52.699 L12.956,44.663 L17.558,44.663 L17.558,52.699 L17.558,52.699 Z M27.514,41.489 C27.514,41.582 27.433,41.663 27.34,41.663 L3.174,41.663 C3.081,41.663 3,41.582 3,41.489 L3,15.256 C3,8.498 8.498,3 15.257,3 C22.016,3 27.514,8.498 27.514,15.256 L27.514,41.489 L27.514,41.489 Z" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

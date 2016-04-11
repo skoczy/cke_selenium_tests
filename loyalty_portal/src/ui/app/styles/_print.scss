@@ -1,0 +1,124 @@
+
+@media screen {
+  #print-section {
+      display: none;
+  }
+}
+
+@media print {
+  // Set up a custom grid for print versions
+  @for $i from 1 through $total-columns {
+    .print-#{$i} {
+      max-width: #{((100 / $total-columns) * $i)}%;
+      float: left;
+    }
+  }
+
+  .print-row {
+    flex-flow: inherit !important;
+  }
+
+  body, html {
+    font-size: 12px;
+  }
+
+  body * {
+      visibility:hidden;
+  }
+
+  #print-section, #print-section * {
+      visibility:visible;
+  }
+
+  #print-section {
+      position:absolute;
+      left:0;
+      top:0;
+  }
+
+  .hide-for-print {
+    display: none;
+  }
+
+  // Search results
+  .ui-grid-column-menu-button, .ui-grid-menu-button {
+    display: none;
+  }
+
+  table[st-table] {
+    table-layout: auto;
+
+    tbody {
+      td {
+        a {
+          display: block;
+          padding: .7rem .5rem;
+          line-height: 1.5;
+          color: $body-font-color;
+          overflow: visible;
+        }
+      }
+    }
+  }
+
+  // General data
+  #custom-fields {
+    padding: 2rem 0 0;
+
+    .print-6:last-of-type {
+      border-left: 1px solid #ccc;
+    }
+
+    input[type="text"] {
+      border: none;
+    }
+
+    .custom-field {
+      .field-value {
+        min-width: auto;
+      }
+
+      .field-label {
+        padding-right: 0 !important;
+      }
+    }
+  }
+
+  .icon-list img {
+    max-height: 20px;
+  }
+
+  // Site persons
+  .site-persons {
+    td {
+      &, & input, & select {
+        font-size: .85rem;
+      }
+
+      &.person-role {
+        width: 20%;
+      }
+
+      &.person-name {
+        width: 25%;
+      }
+    }
+
+
+    input, select {
+      border: none;
+    }
+
+    .phone {
+      width: 20%;
+
+      .phone-cc {
+        width: 30%;
+      }
+
+      .phone-number {
+        width: 69%;
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "name": "sitemaster-ui",
+  "version": "0.1.0",
+  "author": "Jake Marsh <jakemmarsh@gmail.com>",
+  "description": "Sitemaster UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate.git"
+  },
+  "keywords": [
+    "express",
+    "gulp",
+    "browserify",
+    "angular",
+    "sass",
+    "karma",
+    "jasmine",
+    "protractor",
+    "boilerplate"
+  ],
+  "private": true,
+  "engines": {
+    "node": ">=0.12.x"
+  },
+  "devDependencies": {
+    "angular": "^1.4.3",
+    "angular-animate": "^1.4.3",
+    "angular-busy": "http://github.com/cgross/angular-busy/tarball/master",
+    "angular-cookies": "^1.4.3",
+    "angular-mocks": "^1.4.3",
+    "angular-moment": "^0.10.3",
+    "angular-sanitize": "^1.4.4",
+    "angular-smart-table": "^2.1.5",
+    "angular-translate": "^2.7.2",
+    "angular-translate-storage-cookie": "^2.7.2",
+    "angular-ui-router": "^0.2.13",
+    "babelify": "^5.0.4",
+    "brfs": "^1.2.0",
+    "browser-sync": "^2.7.6",
+    "browserify": "^5.10.0",
+    "browserify-istanbul": "^0.2.0",
+    "browserify-ngannotate": "^0.1.0",
+    "browserify-shim": "^3.8.10",
+    "bulk-require": "^0.2.1",
+    "bulkify": "^1.1.1",
+    "debowerify": "^1.2.0",
+    "del": "^0.1.3",
+    "express": "^4.7.2",
+    "foundation-apps": "^1.1.0",
+    "gulp": "^3.8.8",
+    "gulp-angular-templatecache": "^1.3.0",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-cache-bust": "^1.0.1",
+    "gulp-changed": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssjoin": "^0.1.2",
+    "gulp-gzip": "^0.0.8",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-jshint": "^1.8.3",
+    "gulp-karma": "0.0.4",
+    "gulp-notify": "^2.0.0",
+    "gulp-protractor": "0.0.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "hammerjs": "^2.0.4",
+    "html-browserify": "0.0.6",
+    "imagemin-pngcrush": "^0.1.0",
+    "isparta": "^3.0.3",
+    "jasmine-reporters": "^2.0.8",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.21",
+    "karma-babel-preprocessor": "^4.0.1",
+    "karma-browserify": "^4.0.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "git://github.com/douglasduteil/karma-coverage#next",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-junit-reporter": "^0.3.8",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "moment": "^2.10.6",
+    "morgan": "^1.2.2",
+    "ng-csv": "^0.3.3",
+    "oi.select": "https://github.com/tamtakoe/oi.select/archive/0.2.12.tar.gz",
+    "phantomjs": "^1.9.17",
+    "pikaday": "^1.3.3",
+    "pikaday-angular": "^2.0.0",
+    "pretty-hrtime": "^0.2.2",
+    "protractor": "^1.2.0",
+    "rimraf": "^2.4.1",
+    "run-sequence": "^0.3.6",
+    "tether": "^1.1.0",
+    "tiny-lr": "0.0.9",
+    "uglifyify": "^2.5.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^0.1.1",
+    "watchify": "^2.0.0"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "karma start test/karma.conf.js",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "npm run protractor test/protractor.conf.js"
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.js",
+    "angular-animate": "./node_modules/angular-animate/angular-animate.js",
+    "foundation.core": "./node_modules/foundation-apps/js/angular/services/foundation.core.js",
+    "foundation.core.animation": "./node_modules/foundation-apps/js/angular/services/foundation.core.animation.js",
+    "foundation.mediaquery": "./node_modules/foundation-apps/js/angular/services/foundation.mediaquery.js",
+    "foundation.accordion": "./node_modules/foundation-apps/js/angular/components/accordion/accordion.js",
+    "foundation.actionsheet": "./node_modules/foundation-apps/js/angular/components/actionsheet/actionsheet.js",
+    "foundation.common": "./node_modules/foundation-apps/js/angular/components/common/common.js",
+    "foundation.iconic": "./node_modules/foundation-apps/js/angular/components/iconic/iconic.js",
+    "foundation.interchange": "./node_modules/foundation-apps/js/angular/components/interchange/interchange.js",
+    "foundation.modal": "./node_modules/foundation-apps/js/angular/components/modal/modal.js",
+    "foundation.notification": "./node_modules/foundation-apps/js/angular/components/notification/notification.js",
+    "foundation.offcanvas": "./node_modules/foundation-apps/js/angular/components/offcanvas/offcanvas.js",
+    "foundation.panel": "./node_modules/foundation-apps/js/angular/components/panel/panel.js",
+    "foundation.popup": "./node_modules/foundation-apps/js/angular/components/popup/popup.js",
+    "foundation.tabs": "./node_modules/foundation-apps/js/angular/components/tabs/tabs.js",
+    "foundation": "./node_modules/foundation-apps/js/angular/foundation.js",
+    "foundation.dynamicRouting": "./node_modules/foundation-apps/js/angular/services/foundation.dynamicRouting.js",
+    "foundation.dynamicRouting.animations": "./node_modules/foundation-apps/js/angular/services/foundation.dynamicRouting.animations.js",
+    "foundation-apps": "./node_modules/foundation-apps/js/angular/app.js",
+    "ng-ui-grid": "./node_modules/angular-ui-grid/ui-grid.js",
+    "oi.select": "./node_modules/oi.select/dist/select-tpls.js"
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular"
+    },
+    "oi.select": {
+      "depends": "angular",
+      "exports": "angular.module('oi.select')"
+    },
+    "angular-animate": {
+      "depends": "angular",
+      "exports": "angular.module('ngAnimate')"
+    },
+    "foundation.core": {
+      "depends": "angular",
+      "exports": "angular.module('foundation.core')"
+    },
+    "foundation.core.animation": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.core.animation')"
+    },
+    "foundation.mediaquery": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.mediaquery')"
+    },
+    "foundation.accordion": {
+      "depends": "angular",
+      "exports": "angular.module('foundation.accordion')"
+    },
+    "foundation.actionsheet": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.actionsheet')"
+    },
+    "foundation.common": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.common')"
+    },
+    "foundation.iconic": {
+      "depends": "angular",
+      "exports": "angular.module('foundation.iconic')"
+    },
+    "foundation.interchange": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.interchange')"
+    },
+    "foundation.modal": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.modal')"
+    },
+    "foundation.notification": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.notification')"
+    },
+    "foundation.offcanvas": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.offcanvas')"
+    },
+    "foundation.panel": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.panel')"
+    },
+    "foundation.popup": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.popup')"
+    },
+    "foundation.tabs": {
+      "depends": [
+        "angular",
+        "foundation.core"
+      ],
+      "exports": "angular.module('foundation.tabs')"
+    },
+    "foundation": {
+      "depends": [
+        "angular",
+        "foundation.core",
+        "foundation.core.animation",
+        "foundation.accordion",
+        "foundation.actionsheet",
+        "foundation.common",
+        "foundation.iconic",
+        "foundation.interchange",
+        "foundation.modal",
+        "foundation.notification",
+        "foundation.offcanvas",
+        "foundation.panel",
+        "foundation.popup",
+        "foundation.tabs"
+      ],
+      "exports": "angular.module('foundation')"
+    },
+    "foundation.dynamicRouting": {
+      "depends": [
+        "angular",
+        "angular-ui-router"
+      ],
+      "exports": "angular.module('foundation.dynamicRouting')"
+    },
+    "foundation.dynamicRouting.animations": {
+      "depends": [
+        "angular",
+        "angular-animate",
+        "foundation.dynamicRouting"
+      ],
+      "exports": "angular.module('foundation.dynamicRouting.animations')"
+    },
+    "foundation-apps": {
+      "depends": [
+        "angular",
+        "angular-ui-router",
+        "angular-animate",
+        "foundation",
+        "foundation.dynamicRouting",
+        "foundation.dynamicRouting.animations"
+      ],
+      "exports": "angular.module('application')"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}

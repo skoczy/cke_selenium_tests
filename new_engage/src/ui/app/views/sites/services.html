@@ -1,0 +1,51 @@
+<div cg-busy="loadSite" class="loading-wrap"></div>
+<div class="grid-block vertical" id="content">
+  <div id="stationID" class="grid-block">
+    <div class="grid-content">
+      <h1 class="id">{{ 'STATION_ID' | translate }}: {{ siteId }}</h1>
+      <h3>{{ site.stationName }}</h3>
+      <span class="status">{{ 'STATUS' | translate }}: {{ 'STATION_IS' | translate }} {{ site.status }}</span>
+    </div>
+  </div>
+  <div  id="generalData" class="grid-block">
+    <div class="grid-content">
+      <h2 class="hide-for-print">{{ 'SITE_SERVICES' | translate }}</h2>
+    </div>
+    <div class="grid-content text-right">
+      <a class="button secondary hide-for-print" ng-print print-element-id="content" translate>PRINT</a>
+      <a class="button secondary hide-for-print" ng-click="getCsvData()">{{ 'EXPORT' | translate }}</a>
+    </div>
+  </div>
+
+  <div id="services" class="grid-block vertical" ng-show="site">
+    <div class="grid-content">
+      <div class="grid-block">
+        <form class="grid-content" ng-submit="saveServices()" name="servicesForm" novalidate>
+          <div class="small-12 medium-12 large-11 xlarge-8 xxlarge-6">
+            <table class="site-services">
+              <thead>
+                <tr>
+                  <th translate>SERVICE</th>
+                </tr>
+              </thead>
+              <tr ng-repeat="service in site.services">
+                <td class="service-name">
+                  <select ng-model="site.services[$index]" ng-options="type.name for type in getUnusedServices(service) track by type.id">
+                </td>
+                <td class="icon">
+                  <img ng-show="service" ng-src="/images/services/{{ service.icon }}.svg">
+                </td>
+                <td class="remove hide-for-print"><a ng-click="removeService(service)" translate>REMOVE</a></td>
+              </tr>
+            </table>
+            <p><a class="hide-for-print" ng-if="getUnusedServices().length > 0" ng-click="addService()" translate>ADD_NEW_SERVICE</a></p>
+          </div>
+          <div class="small-12">
+            <input type="submit" class="button hide-for-print" value="{{ 'SAVE' | translate }}">
+            <input type="button" class="button secondary hide-for-print" value="{{ 'CANCEL' | translate }}" ng-click="resetServices()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

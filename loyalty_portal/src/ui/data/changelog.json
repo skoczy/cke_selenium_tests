@@ -1,0 +1,65 @@
+[ {
+  "id" : null,
+  "type" : null,
+  "objectId" : null,
+  "changes" : [ {
+    "id" : null,
+    "path" : [ "xCoord" ],
+    "before" : "1",
+    "after" : "2",
+    "state" : "changed"
+  }, {
+    "id" : null,
+    "path" : [ "yCoord" ],
+    "before" : "2",
+    "after" : "3",
+    "state" : "changed"
+  } ],
+  "author" : "test user",
+  "date" : null,
+  "data" : null
+}, {
+  "id" : null,
+  "type" : null,
+  "objectId" : null,
+  "changes" : [ {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{sunday}", "close" ],
+    "before" : null,
+    "after" : "01:30",
+    "state" : "added"
+  }, {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{sunday}", "open" ],
+    "before" : null,
+    "after" : "01:00",
+    "state" : "added"
+  }, {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{saturday}", "close" ],
+    "before" : null,
+    "after" : "01:30",
+    "state" : "added"
+  }, {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{saturday}", "open" ],
+    "before" : null,
+    "after" : "01:00",
+    "state" : "added"
+  }, {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{weekdays}", "close" ],
+    "before" : null,
+    "after" : "01:30",
+    "state" : "added"
+  }, {
+    "id" : null,
+    "path" : [ "openingInfo", "openingTimes", "{weekdays}", "open" ],
+    "before" : null,
+    "after" : "00:30",
+    "state" : "added"
+  } ],
+  "author" : "test user",
+  "date" : null,
+  "data" : null
+} ]

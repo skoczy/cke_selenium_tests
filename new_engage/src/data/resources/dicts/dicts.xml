@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet id="dict-sitepersonroles" author="Piotr Janik">
+        <loadData tableName="sitepersonrole" file="sitepersonroles.csv" relativeToChangelogFile="true">
+            <column name="name" type="STRING"/>
+            <column name="label" type="STRING"/>
+            <column name="fromjde" type="BOOLEAN"/>
+        </loadData>
+    </changeSet>
+    <changeSet id="dict-siteservices" author="Piotr Janik">
+        <loadData tableName="service" file="siteservices.csv" relativeToChangelogFile="true">
+            <column name="dtype" type="STRING"/>
+            <column name="id" type="COMPUTED"/>
+            <column name="displayname" type="STRING"/>
+            <column name="icon" type="STRING"/>
+            <column name="lang" type="STRING"/>
+            <column name="type" type="STRING"/>
+        </loadData>
+        <sql>
+            INSERT INTO aud_service (dtype, id, displayname,icon,lang, type, rev, revtype) SELECT dtype, id, displayname,icon,lang, type, '1' AS "rev", '0' AS "revtype" FROM service;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

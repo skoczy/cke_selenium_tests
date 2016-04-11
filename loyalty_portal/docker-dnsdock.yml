@@ -1,0 +1,19 @@
+# Service to disocver other docker services running on the same host.
+# Use environment variables to set DNS, defaults to hostname or name.
+# Containers are reachable at dnsname.dnsname.docker
+#
+# environment:
+#   - DNSDOCK_NAME=dnsname
+#   - DNSDOCK_IMAGE=dnsname
+# dns:
+#   - 172.17.42.1
+#
+# To start:
+# docker-compose -f docker-dnsdock.yml up -d 
+
+dnsdock:
+  image: tonistiigi/dnsdock:v1.5.0
+  volumes:
+    - /var/run/docker.sock:/run/docker.sock
+  ports:
+    - 172.17.42.1:53:53/udp

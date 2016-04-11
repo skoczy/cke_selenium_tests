@@ -1,0 +1,26 @@
+
+<h3 ng-bind="siteId">0</h3>
+<ul class="menu">
+  <li><a ui-sref="siteGeneralData({id: siteId})" ui-sref-active="active" translate>GENERAL_DATA</a></li>
+  <li><a ui-sref="siteServices({id: siteId})" ui-sref-active="active" translate>SITE_SERVICES</a></li>
+  <li><a ui-sref="siteFuels({id: siteId})" ui-sref-active="active" translate>FUELS</a></li>
+  <li><a ui-sref="sitePersons({id: siteId})" ui-sref-active="active" translate>SITE_PERSONS</a></li>
+  <li>{{ siteStation }}</li>
+</ul>
+<ul class="menu">
+  <li><a ng-click="getCsvData()" translate>EXPORT_ALL_DATA</a></li>
+  <li><a ng-print print-element-id="content" translate>PRINT_ALL_DATA</a></li>
+</ul>
+<ul class="menu">
+  <li class="language-select-wrap">
+    <div class="grid-block">
+        <div class="small-12 medium-12 grid-content">
+          <language-selector></language-selector>
+        </div>
+      </div>
+  </li>
+</ul>
+<div class="logo">
+  <span>Powered by:</span>
+  <img src="/images/logo.png">
+</div>

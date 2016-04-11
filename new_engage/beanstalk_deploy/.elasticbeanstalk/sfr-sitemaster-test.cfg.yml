@@ -1,0 +1,37 @@
+EnvironmentConfigurationMetadata:
+  Description: Test environment configuration for Sitemaster's ElasticBeanstalk.
+  DateCreated: '1448884426000'
+  DateModified: '1448884426000'
+SolutionStack: 64bit Amazon Linux 2015.03 v2.0.0 running Docker 1.6.2
+OptionSettings:
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: yves.hwang@statoilfuelretail.com
+  aws:elasticbeanstalk:application:environment:
+    App: sitemaster
+    NFS_SERVER: nfs01
+    Env: TEST
+  aws:elasticbeanstalk:hostmanager:
+    LogPublicationControl: true
+  aws:elb:loadbalancer:
+    LoadBalancerHTTPSPort: '443'
+    CrossZone: true
+    LoadBalancerHTTPPort: 'OFF'
+    SSLCertificateId: arn:aws:iam::769910020948:server-certificate/sfrlabs_com
+  aws:ec2:vpc:
+    Subnets: subnet-ddb622aa,subnet-9407a9cd
+    ELBSubnets: subnet-ddb622aa,subnet-9407a9cd
+    VPCId: vpc-938535f6
+    AssociatePublicIpAddress: true
+    ELBScheme: public
+  aws:autoscaling:launchconfiguration:
+    SecurityGroups: sg-31f6d754
+    IamInstanceProfile: ip-eb-sfr-sitemaster-test
+    InstanceType: m1.medium
+    EC2KeyName: jenkins_qa
+    RootVolumeType: gp2
+  aws:autoscaling:asg:
+    MaxSize: '1'
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0

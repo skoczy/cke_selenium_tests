@@ -1,0 +1,36 @@
+# Yves Hwang
+# 06.05.2015
+#
+FROM statoilfuelretail/docker:jdk8jetty8mongo2_latest
+MAINTAINER Yves Hwang, yves.hwang@statoilfuelretail.com
+
+# install gradle
+RUN apt-get update
+RUN add-apt-repository ppa:cwchien/gradle -y
+RUN apt-get update
+RUN apt-get install -y gradle
+
+# Install java8
+# yh 05.06.2015. hot fix for broken python software properties. see http://askubuntu.com/questions/598465/apt-get-install-python-software-properties-not-working
+# bug reported here https://bugs.launchpad.net/ubuntu/+source/apt-setup/+bug/1434699
+RUN rm -fr /var/lib/apt/lists
+RUN apt-get update
+RUN apt-get install python-software-properties -y
+RUN apt-get install software-properties-common -y
+RUN add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get update
+RUN apt-get install openjdk-8-jdk -y
+
+RUN apt-get install -y
+RUN apt-get install curl git build-essential python libfreetype6 fontconfig -y
+RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
+RUN apt-get install nodejs -y
+ENV NODE_PATH=/npm/node_modules
+RUN sudo npm install -g pangyp node-gyp marked jshint bower protractor gulp-cli
+RUN mkdir -p /workspace
+RUN mkdir -p /npm/node_modules
+ADD src/ui/package.json /npm/package.json
+RUN cd /npm && npm install --prefix=/npm
+VOLUME ["/workspace"]
+WORKDIR  /workspace
+CMD ["/bin/bash"]

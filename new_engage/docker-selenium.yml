@@ -1,0 +1,26 @@
+# Starts a selenium hub and adds two workes.
+# Example:
+# To start: docker-compose -f docker-selenium.yml up -d --force-recreate
+# To stop: docker-compose -f docker-selenium.yml stop
+
+selenium-hub:
+  image: selenium/hub
+  ports:
+    - '4444'
+  dns:
+    - 172.17.42.1
+  environment:
+    - DNSDOCK_NAME=selenium-hub
+    - DNSDOCK_IMAGE=selenium-hub
+selenium-chrome:
+  image: selenium/node-chrome
+  links:
+    - selenium-hub:hub
+  dns:
+    - 172.17.42.1
+selenium-firefox:
+  image: selenium/node-firefox
+  links:
+    - selenium-hub:hub
+  dns:
+    - 172.17.42.1
